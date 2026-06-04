@@ -10,23 +10,21 @@
 
     <TextView
         android:id="@+id/welcomeView"
-        android:layout_width="302dp"
-        android:layout_height="71dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Welcome to the best financial calculator!"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/mainButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleView"
-        app:layout_constraintVertical_bias="0.5"
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <TextView
         android:id="@+id/titleView"
-        android:layout_width="143dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="FinCal"
@@ -36,7 +34,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <ImageView
@@ -48,8 +45,6 @@
         android:alpha=".5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <Button
@@ -66,28 +61,26 @@
 
     <TextView
         android:id="@+id/textQuote"
-        android:layout_width="321dp"
-        android:layout_height="69dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="A wise man saves for the future, but a foolish man devours all he has.  \n– Proverbs 21:20"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainButton"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintTop_toBottomOf="@+id/mainButton" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/pandaLogo"
         android:layout_width="412dp"
         android:layout_height="336dp"
         app:layout_constraintBottom_toTopOf="@+id/mainButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeView"
-        app:layout_constraintVertical_bias="0.163"
         app:srcCompat="@drawable/panda" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
