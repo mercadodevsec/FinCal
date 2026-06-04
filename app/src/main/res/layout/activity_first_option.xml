@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstOptionActivity"
-    android:background="#DDDBDE">
+    android:background="#DDDBDE"
+    tools:context=".FirstOptionActivity">
 
 
     <TextView
@@ -50,7 +50,7 @@
 
                 <Button
                     android:id="@+id/option1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -71,7 +71,7 @@
 
                 <Button
                     android:id="@+id/option2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -93,7 +93,7 @@
 
                 <Button
                     android:id="@+id/option3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -114,7 +114,7 @@
 
                 <Button
                     android:id="@+id/option4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -136,7 +136,7 @@
 
                 <Button
                     android:id="@+id/option5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -157,7 +157,7 @@
 
                 <Button
                     android:id="@+id/option6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -169,6 +169,7 @@
                 </Button>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -178,7 +179,7 @@
 
                 <Button
                     android:id="@+id/option7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -199,7 +200,7 @@
 
                 <Button
                     android:id="@+id/option8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -211,6 +212,7 @@
                 </Button>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -220,7 +222,7 @@
 
                 <Button
                     android:id="@+id/option9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -241,7 +243,7 @@
 
                 <Button
                     android:id="@+id/option10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -253,6 +255,7 @@
                 </Button>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -262,7 +265,7 @@
 
                 <Button
                     android:id="@+id/option11"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -283,7 +286,7 @@
 
                 <Button
                     android:id="@+id/option12"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -295,6 +298,7 @@
                 </Button>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -304,7 +308,7 @@
 
                 <Button
                     android:id="@+id/option13"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -325,7 +329,7 @@
 
                 <Button
                     android:id="@+id/option14"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -337,6 +341,7 @@
                 </Button>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -346,7 +351,7 @@
 
                 <Button
                     android:id="@+id/option15"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
@@ -367,7 +372,7 @@
 
                 <Button
                     android:id="@+id/option16"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
