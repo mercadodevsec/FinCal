@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="Welcome to the best financial calculator!"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/mainButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,11 +53,12 @@
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/mainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:text="Let's go!"
+        android:backgroundTint="#3B373B"
         app:layout_constraintBottom_toTopOf="@+id/textQuote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,15 +68,26 @@
         android:id="@+id/textQuote"
         android:layout_width="321dp"
         android:layout_height="69dp"
-        android:gravity="left"
+        android:gravity="left|center"
         android:text="A wise man saves for the future, but a foolish man devours all he has.  \n– Proverbs 21:20"
-        android:textAllCaps="false"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/mainButton"
         app:layout_constraintVertical_bias="0.522" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="412dp"
+        android:layout_height="336dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeView"
+        app:layout_constraintVertical_bias="0.163"
+        app:srcCompat="@drawable/panda" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.FinCal" parent="Base.Theme.FinCal" />
+
+    <style name="Theme.FinCal.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FinCal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FinCal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
