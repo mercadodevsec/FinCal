@@ -45,7 +45,8 @@
         android:alpha=".5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
 
     <Button
         android:id="@+id/mainButton"
@@ -57,7 +58,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textQuote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeView" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeView"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textQuote"
@@ -73,7 +75,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainButton"
-        app:layout_constraintVertical_bias="0.42000002" />
+        app:layout_constraintVertical_bias="0.42000002"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/pandaLogo"
@@ -83,6 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeView"
-        app:srcCompat="@drawable/panda" />
+        app:srcCompat="@drawable/panda"
+        tools:ignore="ContentDescription,VisualLintBounds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,13 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="What calculator do you need?"
+        android:text="Choose a category"
         android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -27,14 +28,14 @@
         android:layout_height="350dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textQuote2"
+        app:layout_constraintBottom_toTopOf="@+id/textQuote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsTitle"
         app:layout_constraintVertical_bias="0.5">
 
         <LinearLayout
-            android:id="@+id/calculatorList"
+            android:id="@+id/categoryList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -44,17 +45,18 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <Button
-                    android:id="@+id/mortgageButton"
+                    android:id="@+id/option1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
                     android:text="Mortgage and Real Estate"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
 
                 </Button>
 
@@ -64,17 +66,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <Button
-                    android:id="@+id/autoButton"
+                    android:id="@+id/option2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
                     android:text="Auto"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
 
                 </Button>
 
@@ -85,17 +88,18 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <Button
-                    android:id="@+id/investmentButton"
+                    android:id="@+id/option3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
                     android:text="Investment"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
 
                 </Button>
 
@@ -105,17 +109,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <Button
-                    android:id="@+id/retirementButton"
+                    android:id="@+id/option4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
                     android:text="Retirement"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
 
                 </Button>
 
@@ -126,17 +131,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <Button
-                    android:id="@+id/taxButton"
+                    android:id="@+id/option5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
                     android:text="Tax and Salary"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
 
                 </Button>
 
@@ -146,17 +152,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
                 <Button
-                    android:id="@+id/otherButton"
+                    android:id="@+id/option6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
                     android:text="Other"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
 
                 </Button>
 
@@ -167,7 +174,7 @@
 
 
     <TextView
-        android:id="@+id/textQuote2"
+        android:id="@+id/textQuote"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -181,7 +188,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/optionsButton"
@@ -193,5 +201,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuote2" />
+        app:layout_constraintTop_toBottomOf="@+id/textQuote"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
