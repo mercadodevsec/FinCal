@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -22,12 +21,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScrollingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/Theme.FinCal.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".OptionsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
@@ -37,6 +30,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SecondOptionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ThirdOptionActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

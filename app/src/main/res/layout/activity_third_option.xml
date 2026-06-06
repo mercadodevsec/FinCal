@@ -5,9 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDBDE"
-    tools:context=".FirstOptionActivity">
-
+    tools:context=".ThirdOptionActivity">
 
     <TextView
         android:id="@+id/optionsTitle"
@@ -55,7 +53,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Mortgage Calculator"
+                    android:text="Interest Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -76,7 +74,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Amortization Calculator"
+                    android:text="Investment Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -98,7 +96,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Mortgage Payoff Calculator"
+                    android:text="Finance Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -119,7 +117,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="House Affordability Calculator"
+                    android:text="Compound Interest Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -141,7 +139,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Rent Calculator"
+                    android:text="Interest Rate Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -162,7 +160,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Debt-to-Income Ratio Calculator"
+                    android:text="Savings Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -184,7 +182,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Real Estate Calculator"
+                    android:text="Simple Interest Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -205,7 +203,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Refinance Calculator"
+                    android:text="CD Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -227,7 +225,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Rental Property Calculator"
+                    android:text="Bond Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -248,7 +246,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="APR Calculator"
+                    android:text="Mutual Fund Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -270,7 +268,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="FHA Loan Calculator"
+                    android:text="Average return Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -291,7 +289,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="VA Mortgage Calculator"
+                    android:text="IRR Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -313,7 +311,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Home Equity Loan Calculator"
+                    android:text="ROI Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -334,7 +332,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="HELOC Calculator"
+                    android:text="Payback Period Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -356,7 +354,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Down Payment Calculator"
+                    android:text="Present Value Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -377,7 +375,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Rent vs. Buy Calculator"
+                    android:text="Future Value Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -395,7 +393,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="Do not save what is left after spending; instead, spend what is left after saving. \n — Warren Buffett"
+        android:text="Never spend your money before you have it. \n — Thomas Jefferson"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/optionsButton"
