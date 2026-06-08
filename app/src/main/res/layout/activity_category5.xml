@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FourthOptionActivity">
+    tools:context=".Category5Activity">
 
     <TextView
         android:id="@+id/optionsTitle"
@@ -53,7 +53,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Retirement Calculator"
+                    android:text="Income Tax Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -74,7 +74,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="401K Calculator"
+                    android:text="Salary Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -96,7 +96,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Pension Calculator"
+                    android:text="Marriage Tax Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -117,7 +117,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Social Security Calculator"
+                    android:text="Estate Tax Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -139,93 +139,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#656E77"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Annuity Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="Annuity Payout Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="Roth IRA Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="IRA Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="RMD Calculator"
+                    android:text="Take-Home-Paycheck Calculator"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText">
 
@@ -243,7 +157,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="A budget is telling your money where to go instead of wondering where it went. \n — Dave Ramsey"
+        android:text="For the love of money is a root of all kinds of evil, and by craving it, some have wandered away from the faith and pierced themselves with many griefs. \n — 1 Timothy 6:10"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/optionsButton"
@@ -252,7 +166,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
         app:layout_constraintVertical_bias="0.5"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText,VisualLintLongText" />
 
     <Button
         android:id="@+id/optionsButton"

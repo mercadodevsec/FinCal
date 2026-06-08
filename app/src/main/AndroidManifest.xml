@@ -25,27 +25,35 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".FirstOptionActivity"
+            android:name=".Category1Activity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SecondOptionActivity"
+            android:name=".Category2Activity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ThirdOptionActivity"
+            android:name=".Category3Activity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".FourthOptionActivity"
+            android:name=".Category4Activity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".FifthOptionActivity"
+            android:name=".Category5Activity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SixthOptionActivity"
+            android:name=".Category6Activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Category1Option1Activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Category1Option2Activity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
