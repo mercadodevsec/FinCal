@@ -36,6 +36,18 @@
             android:name=".ThirdOptionActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FourthOptionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FifthOptionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SixthOptionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

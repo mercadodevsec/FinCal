@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthOptionActivity">
+
+    <TextView
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Which calculator do you need?"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="320dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textQuote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitle"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/calculatorList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Retirement Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="401K Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Pension Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Social Security Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Annuity Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Annuity Payout Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Roth IRA Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="IRA Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="RMD Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textQuote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="A budget is telling your money where to go instead of wondering where it went. \n — Dave Ramsey"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/optionsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/optionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3B373B"
+        android:text="Go back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuote"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
+</androidx.constraintlayout.widget.ConstraintLayout>

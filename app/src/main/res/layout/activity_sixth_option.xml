@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SixthOptionActivity">
+
+    <TextView
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Which calculator do you need?"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="320dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textQuote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitle"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/calculatorList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Loan Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Payment Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Currency Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Inflation Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Sales Tax Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Credit Card Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Credit Cards Payoff Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Debt Payoff Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Debt Consolidation Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Repayment Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Student Loan Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="College Cost Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="VAT Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Depreciation Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Margin Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Discount Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Business Loan Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Personal Loan Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Boat Loan Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Lease Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Budget Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/option22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#656E77"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Commission Calculator"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText">
+
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textQuote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="Wealthy people invest first and spend what's left… Broke people spend first and invest what's left. \n — SeedTime"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/optionsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/optionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3B373B"
+        android:text="Go back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuote"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
+</androidx.constraintlayout.widget.ConstraintLayout>
