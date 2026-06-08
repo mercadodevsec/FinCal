@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OptionsActivity"
+            android:name=".CategoryOptionsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
