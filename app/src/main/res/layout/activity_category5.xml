@@ -160,7 +160,7 @@
         android:text="For the love of money is a root of all kinds of evil, and by craving it, some have wandered away from the faith and pierced themselves with many griefs. \n — 1 Timothy 6:10"
         android:textSize="15sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/optionsButton"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,7 +169,7 @@
         tools:ignore="HardcodedText,VisualLintLongText" />
 
     <Button
-        android:id="@+id/optionsButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#3B373B"

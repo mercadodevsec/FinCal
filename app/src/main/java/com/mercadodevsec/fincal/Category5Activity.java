@@ -1,6 +1,8 @@
 package com.mercadodevsec.fincal;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,20 @@ public class Category5Activity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        SetupButton(R.id.backButton, CategoryOptionsActivity.class);
+        SetupButton(R.id.option1, Category5Option1Activity.class);
+        SetupButton(R.id.option2, Category5Option2Activity.class);
+        SetupButton(R.id.option3, Category5Option3Activity.class);
+        SetupButton(R.id.option4, Category5Option4Activity.class);
+        SetupButton(R.id.option5, Category5Option5Activity.class);
+                }
+    private void SetupButton(int buttonID, Class<?> activityClass) {
+        Button button = findViewById(buttonID);
+        button.setOnClickListener(v -> {
+            Intent intent = new Intent(this, activityClass);
+            startActivity(intent);
         });
     }
 }
