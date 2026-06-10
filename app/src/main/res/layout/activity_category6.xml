@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     tools:context=".Category6Activity">
 
     <TextView
@@ -12,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Which calculator do you need?"
+        android:text="@string/which_calculator"
+        android:textColor="@color/text_primary"
         android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -51,13 +52,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Loan Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_loan"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -72,13 +71,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Payment Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_payment"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -94,13 +91,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Currency Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_currency"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -115,13 +110,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Inflation Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_inflation"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -137,13 +130,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Sales Tax Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_sales_tax"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -158,13 +149,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Credit Card Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_credit_card"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -180,13 +169,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Credit Cards Payoff Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_credit_cards_payoff"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -201,13 +188,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Debt Payoff Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_debt_payoff"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -223,13 +208,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Debt Consolidation Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_debt_consolidation"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -245,13 +228,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Repayment Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_repayment"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -266,13 +247,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Student Loan Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_student_loan"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -287,13 +266,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="College Cost Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_college_cost"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -308,13 +285,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="VAT Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_vat"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -329,13 +304,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Depreciation Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_depreciation"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -350,13 +323,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Margin Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_margin"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -371,13 +342,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Discount Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_discount"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -392,13 +361,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Business Loan Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_business_loan"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -413,13 +380,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Personal Loan Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_personal_loan"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -434,13 +399,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Boat Loan Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_boat_loan"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -455,13 +418,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Lease Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_lease"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -476,13 +437,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Budget Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_budget"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -497,13 +456,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Commission Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_commission"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -517,7 +474,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="Wealthy people invest first and spend what's left… Broke people spend first and invest what's left. \n — SeedTime"
+        android:text="@string/quote_8"
+        android:textColor="@color/text_primary"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
@@ -525,21 +483,20 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
-        app:layout_constraintVertical_bias="0.5"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#3B373B"
-        android:text="Go back"
+        android:backgroundTint="@color/button_navigation"
+        android:text="@string/button_back"
+        android:textColor="@color/text_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuote"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@+id/textQuote" />
 
     <ImageView
         android:id="@+id/logo"

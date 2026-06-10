@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDBDE"
+    android:background="@color/app_background"
     tools:context=".Category2Activity">
 
 
@@ -14,14 +14,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Which calculator do you need?"
+        android:text="@string/which_calculator"
+        android:textColor="@color/text_primary"
         android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -54,13 +54,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Auto Loan Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_auto_loan"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -75,13 +73,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Cash Back or Low Interest Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_cash_back_low_interest"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -97,13 +93,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Auto Lease Calculator"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/calc_auto_lease"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -117,7 +111,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="Beware of little expenses; a small leak will sink a great ship. \n — Benjamin Franklin"
+        android:text="@string/quote_4"
+        android:textColor="@color/text_primary"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
@@ -125,21 +120,20 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
-        app:layout_constraintVertical_bias="0.5"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#3B373B"
-        android:text="Go back"
+        android:backgroundTint="@color/button_navigation"
+        android:text="@string/button_back"
+        android:textColor="@color/text_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuote"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@+id/textQuote" />
 
     <ImageView
         android:id="@+id/logo"

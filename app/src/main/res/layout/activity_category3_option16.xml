@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     tools:context=".Category3Option16Activity">
 
     <TextView
@@ -12,12 +13,12 @@
         android:layout_width="271dp"
         android:layout_height="91dp"
         android:gravity="center"
-        android:text="Sorry. Not yet available  :("
+        android:text="@string/not_available"
+        android:textColor="@color/text_primary"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

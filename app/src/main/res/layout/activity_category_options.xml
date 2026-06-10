@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDBDE"
+    android:background="@color/app_background"
     tools:context=".CategoryOptionsActivity">
 
     <TextView
@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Choose a category"
+        android:text="@string/choose_category"
+        android:textColor="@color/text_primary"
         android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -51,13 +51,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Mortgage and Real Estate"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/category_mortgage"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -72,13 +70,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Auto"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/category_auto"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -93,13 +89,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Investment"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/category_investment"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -114,13 +108,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Retirement"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/category_retirement"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -135,13 +127,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Tax and Salary"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/category_tax"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -156,13 +146,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="#656E77"
+                    android:backgroundTint="@color/button_scroll"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Other"
-                    android:textSize="20sp"
-                    tools:ignore="HardcodedText">
-
-                </Button>
+                    android:text="@string/category_other"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -177,7 +165,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="Wealth consists not in having great possessions, but in having few wants.\n — Epictetus"
+        android:text="@string/quote_2"
+        android:textColor="@color/text_primary"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
@@ -185,21 +174,20 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView"
-        app:layout_constraintVertical_bias="0.5"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#3B373B"
-        android:text="Go back"
+        android:backgroundTint="@color/button_navigation"
+        android:text="@string/button_back"
+        android:textColor="@color/text_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuote"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@+id/textQuote" />
 
     <ImageView
         android:id="@+id/logo"

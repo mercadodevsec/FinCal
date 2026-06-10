@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- App specific colors -->
+    <color name="app_background">#DDDBDE</color>
+    <color name="button_navigation">#3B373B</color> <!-- main button -->
+    <color name="button_scroll">#656E77</color> <!-- scroll button -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#FFFFFFFF</color>
 </resources>

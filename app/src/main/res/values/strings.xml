@@ -1,94 +1,113 @@
 <resources>
     <string name="app_name">FinCal</string>
-    <string name="title_activity_scrolling">ScrollingActivity</string>
-    <string name="large_text">
-        "Material is the metaphor.\n\n"
 
-        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
-        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
-        "technologically advanced and open to imagination and magic.\n"
-        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
-        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
-        "flexibility of the material creates new affordances that supercede those in the physical "
-        "world, without breaking the rules of physics.\n"
-        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
-        "interact, and exist in space and in relation to each other. Realistic lighting shows "
-        "seams, divides space, and indicates moving parts.\n\n"
+    <!-- Main Activity -->
+    <string name="welcome_message">Welcome to the best financial calculator!</string>
+    <string name="button_start">Let\'s go!</string>
+    <string name="quote_1">A wise man saves for the future, but a foolish man devours all he has.  \n– Proverbs 21:20</string>
 
-        "Bold, graphic, intentional.\n\n"
+    <!-- Category Options -->
+    <string name="choose_category">Choose a category</string>
+    <string name="category_mortgage">Mortgage and Real Estate</string>
+    <string name="category_auto">Auto</string>
+    <string name="category_investment">Investment</string>
+    <string name="category_retirement">Retirement</string>
+    <string name="category_tax">Tax and Salary</string>
+    <string name="category_other">Other</string>
+    <string name="quote_2">Wealth consists not in having great possessions, but in having few wants.\n — Epictetus</string>
+    <string name="button_back">Go back</string>
 
-        "The foundational elements of print based design typography, grids, space, scale, color, "
-        "and use of imagery guide visual treatments. These elements do far more than please the "
-        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
-        "imagery, large scale typography, and intentional white space create a bold and graphic "
-        "interface that immerse the user in the experience.\n"
-        "An emphasis on user actions makes core functionality immediately apparent and provides "
-        "waypoints for the user.\n\n"
+    <!-- Common -->
+    <string name="which_calculator">Which calculator do you need?</string>
+    <string name="not_available">Sorry. Not yet available  :(</string>
 
-        "Motion provides meaning.\n\n"
+    <!-- Category 1 (Mortgage) -->
+    <string name="calc_mortgage">Mortgage Calculator</string>
+    <string name="calc_amortization">Amortization Calculator</string>
+    <string name="calc_mortgage_payoff">Mortgage Payoff Calculator</string>
+    <string name="calc_house_affordability">House Affordability Calculator</string>
+    <string name="calc_rent">Rent Calculator</string>
+    <string name="calc_debt_income_ratio">Debt-to-Income Ratio Calculator</string>
+    <string name="calc_real_estate">Real Estate Calculator</string>
+    <string name="calc_refinance">Refinance Calculator</string>
+    <string name="calc_rental_property">Rental Property Calculator</string>
+    <string name="calc_apr">APR Calculator</string>
+    <string name="calc_fha_loan">FHA Loan Calculator</string>
+    <string name="calc_va_mortgage">VA Mortgage Calculator</string>
+    <string name="calc_home_equity_loan">Home Equity Loan Calculator</string>
+    <string name="calc_heloc">HELOC Calculator</string>
+    <string name="calc_down_payment">Down Payment Calculator</string>
+    <string name="calc_rent_buy">Rent vs. Buy Calculator</string>
+    <string name="quote_3">Do not save what is left after spending; instead, spend what is left after saving. \n — Warren Buffett</string>
 
-        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
-        "inflection points that initiate motion, transforming the whole design.\n"
-        "All action takes place in a single environment. Objects are presented to the user without "
-        "breaking the continuity of experience even as they transform and reorganize.\n"
-        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
-        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+    <!-- Category 2 (Auto) -->
+    <string name="calc_auto_loan">Auto Loan Calculator</string>
+    <string name="calc_cash_back_low_interest">Cash Back or Low Interest Calculator</string>
+    <string name="calc_auto_lease">Auto Lease Calculator</string>
+    <string name="quote_4">Beware of little expenses; a small leak will sink a great ship. \n — Benjamin Franklin</string>
 
-        "3D world.\n\n"
+    <!-- Category 3 (Investment) -->
+    <string name="calc_interest">Interest Calculator</string>
+    <string name="calc_investment">Investment Calculator</string>
+    <string name="calc_finance">Finance Calculator</string>
+    <string name="calc_compound_interest">Compound Interest Calculator</string>
+    <string name="calc_interest_rate">Interest Rate Calculator</string>
+    <string name="calc_savings">Savings Calculator</string>
+    <string name="calc_simple_interest">Simple Interest Calculator</string>
+    <string name="calc_cd">CD Calculator</string>
+    <string name="calc_bond">Bond Calculator</string>
+    <string name="calc_mutual_fund">Mutual Fund Calculator</string>
+    <string name="calc_average_return">Average return Calculator</string>
+    <string name="calc_irr">IRR Calculator</string>
+    <string name="calc_roi">ROI Calculator</string>
+    <string name="calc_payback_period">Payback Period Calculator</string>
+    <string name="calc_present_value">Present Value Calculator</string>
+    <string name="calc_future_value">Future Value Calculator</string>
+    <string name="quote_5">Never spend your money before you have it. \n — Thomas Jefferson</string>
 
-        "The material environment is a 3D space, which means all objects have x, y, and z "
-        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
-        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
-        "position along the z-axis and has a standard 1dp thickness.\n"
-        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
-        "emulated by manipulating the y-axis.\n\n"
+    <!-- Category 4 (Retirement) -->
+    <string name="calc_retirement">Retirement Calculator</string>
+    <string name="calc_401k">401K Calculator</string>
+    <string name="calc_pension">Pension Calculator</string>
+    <string name="calc_social_security">Social Security Calculator</string>
+    <string name="calc_annuity">Annuity Calculator</string>
+    <string name="calc_annuity_payout">Annuity Payout Calculator</string>
+    <string name="calc_roth_ira">Roth IRA Calculator</string>
+    <string name="calc_ira">IRA Calculator</string>
+    <string name="calc_rmd">RMD Calculator</string>
+    <string name="quote_6">A budget is telling your money where to go instead of wondering where it went. \n — Dave Ramsey</string>
 
-        "Light and shadow.\n\n"
+    <!-- Category 5 (Tax) -->
+    <string name="calc_income_tax">Income Tax Calculator</string>
+    <string name="calc_salary">Salary Calculator</string>
+    <string name="calc_marriage_tax">Marriage Tax Calculator</string>
+    <string name="calc_estate_tax">Estate Tax Calculator</string>
+    <string name="calc_take_home_paycheck">Take-Home-Paycheck Calculator</string>
+    <string name="quote_7">For the love of money is a root of all kinds of evil, and by craving it, some have wandered away from the faith and pierced themselves with many griefs. \n — 1 Timothy 6:10</string>
 
-        "Within the material environment, virtual lights illuminate the scene. Key lights create "
-        "directional shadows, while ambient light creates soft shadows from all angles.\n"
-        "Shadows in the material environment are cast by these two light sources. In Android "
-        "development, shadows occur when light sources are blocked by sheets of material at "
-        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
-        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+    <!-- Category 6 (Other) -->
+    <string name="calc_loan">Loan Calculator</string>
+    <string name="calc_payment">Payment Calculator</string>
+    <string name="calc_currency">Currency Calculator</string>
+    <string name="calc_inflation">Inflation Calculator</string>
+    <string name="calc_sales_tax">Sales Tax Calculator</string>
+    <string name="calc_credit_card">Credit Card Calculator</string>
+    <string name="calc_credit_cards_payoff">Credit Cards Payoff Calculator</string>
+    <string name="calc_debt_payoff">Debt Payoff Calculator</string>
+    <string name="calc_debt_consolidation">Debt Consolidation Calculator</string>
+    <string name="calc_repayment">Repayment Calculator</string>
+    <string name="calc_student_loan">Student Loan Calculator</string>
+    <string name="calc_college_cost">College Cost Calculator</string>
+    <string name="calc_vat">VAT Calculator</string>
+    <string name="calc_depreciation">Depreciation Calculator</string>
+    <string name="calc_margin">Margin Calculator</string>
+    <string name="calc_discount">Discount Calculator</string>
+    <string name="calc_business_loan">Business Loan Calculator</string>
+    <string name="calc_personal_loan">Personal Loan Calculator</string>
+    <string name="calc_boat_loan">Boat Loan Calculator</string>
+    <string name="calc_lease">Lease Calculator</string>
+    <string name="calc_budget">Budget Calculator</string>
+    <string name="calc_commission">Commission Calculator</string>
+    <string name="quote_8">Wealthy people invest first and spend what\'s left… Broke people spend first and invest what\'s left. \n — SeedTime</string>
 
-        "Resting elevation.\n\n"
-
-        "All material objects, regardless of size, have a resting elevation, or default elevation "
-        "that does not change. If an object changes elevation, it should return to its resting "
-        "elevation as soon as possible.\n\n"
-
-        "Component elevations.\n\n"
-
-        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
-        "does not vary from 6dp in one app to 16dp in another app).\n"
-        "Components may have different resting elevations across platforms, depending on the depth "
-        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
-
-        "Responsive elevation and dynamic elevation offsets.\n\n"
-
-        "Some component types have responsive elevation, meaning they change elevation in response "
-        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
-        "changes are consistently implemented using dynamic elevation offsets.\n"
-        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
-        "to the component’s resting state. They ensure that elevation changes are consistent "
-        "across actions and component types. For example, all components that lift on press have "
-        "the same elevation change relative to their resting elevation.\n"
-        "Once the input event is completed or cancelled, the component will return to its resting "
-        "elevation.\n\n"
-
-        "Avoiding elevation interference.\n\n"
-
-        "Components with responsive elevations may encounter other components as they move between "
-        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
-        "through other material, components avoid interfering with one another any number of ways, "
-        "whether on a per component basis or using the entire app layout.\n"
-        "On a component level, components can move or be removed before they cause interference. "
-        "For example, a floating action button (FAB) can disappear or move off screen before a "
-        "user picks up a card, or it can move if a snackbar appears.\n"
-        "On the layout level, design your app layout to minimize opportunities for interference. "
-        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
-        "when a user tries to pick up one of cards.\n\n"
-    </string>
-    <string name="action_settings">Settings</string>
 </resources>
