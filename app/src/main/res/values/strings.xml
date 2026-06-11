@@ -110,4 +110,9 @@
     <string name="calc_commission">Commission Calculator</string>
     <string name="quote_8">Wealthy people invest first and spend what\'s left… Broke people spend first and invest what\'s left. \n — SeedTime</string>
 
+    <!-- Edit Text strings -->
+    <string name="home_price">Home Price</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="loan_term">Loan Term</string>
+
 </resources>

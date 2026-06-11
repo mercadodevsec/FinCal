@@ -57,15 +57,6 @@ The app is organized into several categories, each containing specialized calcul
 - Android Studio (latest version recommended)
 - Android SDK 24 (Nougat) or higher
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/FinCal.git
-   ```
-2. Open the project in Android Studio.
-3. Sync Gradle and build the project.
-4. Run the app on an emulator or physical device.
-
 ## Usage
 
 1. Launch the app to see the main screen.

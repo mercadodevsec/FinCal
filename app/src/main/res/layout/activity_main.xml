@@ -43,10 +43,11 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="-5dp"
         android:alpha=".5"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/logo"
-        tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
 
     <Button
         android:id="@+id/mainButton"

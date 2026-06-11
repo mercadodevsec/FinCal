@@ -9,16 +9,82 @@
     tools:context=".Category1Option1Activity">
 
     <TextView
-        android:id="@+id/notReadyMessage"
-        android:layout_width="271dp"
-        android:layout_height="91dp"
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:gravity="center"
-        android:text="@string/not_available"
+        android:text="@string/calc_mortgage"
         android:textColor="@color/text_primary"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/homePrice"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/home_price"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
+
+    <EditText
+        android:id="@+id/downPayment"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/down_payment"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePrice" />
+
+    <EditText
+        android:id="@+id/loanTerm"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/loan_term"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downPayment" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
