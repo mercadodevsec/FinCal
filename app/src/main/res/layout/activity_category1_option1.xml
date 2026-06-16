@@ -56,6 +56,8 @@
                     android:inputType="numberDecimal"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
@@ -79,6 +81,8 @@
                     android:inputType="numberDecimal"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/homePrice" />
@@ -102,6 +106,8 @@
                     android:inputType="numberDecimal"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/downPayment" />
@@ -125,6 +131,8 @@
                     android:inputType="number"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/downPayment" />
@@ -136,7 +144,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/include_taxes_costs"
-                android:textColor="@color/text_primary" />
+                android:textColor="@color/text_primary"
+                app:buttonTint="@color/text_third"
+                app:buttonIconTint="@color/text_secondary" />
 
             <LinearLayout
                 android:id="@+id/additionalCostsLayout"
@@ -163,7 +173,9 @@
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:paddingStart="5dp"
-                        android:paddingEnd="5dp" />
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
 
                 </LinearLayout>
 
@@ -184,7 +196,9 @@
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:paddingStart="5dp"
-                        android:paddingEnd="5dp" />
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -204,7 +218,9 @@
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:paddingStart="5dp"
-                        android:paddingEnd="5dp" />
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -224,7 +240,9 @@
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:paddingStart="5dp"
-                        android:paddingEnd="5dp" />
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -244,7 +262,9 @@
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:paddingStart="5dp"
-                        android:paddingEnd="5dp" />
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -259,9 +279,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
+        android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/text_primary"
         app:layout_constraintBottom_toTopOf="@id/calculateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -271,7 +291,9 @@
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_calculate"
         android:text="@string/calculate_button"
+        android:textColor="@color/text_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,6 +7,9 @@
     <color name="app_background">#DDDBDE</color>
     <color name="button_navigation">#3B373B</color> <!-- main button -->
     <color name="button_scroll">#656E77</color> <!-- scroll button -->
+    <color name="button_calculate">#3B373B</color>
+    <color name="text_hint_color">#90000000</color> <!-- calculate button -->
+
 
     <color name="text_primary">#000000</color>
     <color name="text_secondary">#FFFFFFFF</color>
