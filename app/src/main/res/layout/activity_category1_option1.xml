@@ -8,71 +8,274 @@
     android:background="@color/app_background"
     tools:context=".Category1Option1Activity">
 
+
     <TextView
         android:id="@+id/optionsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:gravity="center"
         android:text="@string/calc_mortgage"
         android:textColor="@color/text_primary"
         android:textSize="23sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/homePrice"
-        android:layout_width="175dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="@string/home_price"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toTopOf="@id/resultTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
+        app:layout_constraintTop_toBottomOf="@id/optionsTitle">
 
-    <EditText
-        android:id="@+id/downPayment"
-        android:layout_width="175dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="@string/down_payment"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homePrice" />
+        <LinearLayout
+            android:id="@+id/mortgageScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/loanTerm"
-        android:layout_width="175dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="10"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/homePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/home_price"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/downPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/down_payment"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/homePrice" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/interestRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/interest_rate"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/downPayment" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/loanTerm"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/loan_term"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/downPayment" />
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/includeTaxesCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/include_taxes_costs"
+                android:textColor="@color/text_primary" />
+
+            <LinearLayout
+                android:id="@+id/additionalCostsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/propertyTaxes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/property_taxes"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/homeInsurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/home_insurance"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/pmiInsurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/pmi_insurance"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/hoaFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hoa_fee"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/otherCosts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/other_costs"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:hint="@string/loan_term"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        app:layout_constraintBottom_toTopOf="@id/calculateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/downPayment" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
 
     <ImageView
         android:id="@+id/logo"
