@@ -111,19 +111,26 @@
     <string name="quote_8">Wealthy people invest first and spend what\'s left… Broke people spend first and invest what\'s left. \n — SeedTime</string>
 
     <!-- Edit Text strings -->
-    <string name="home_price">Home Price ($)</string>
-    <string name="down_payment">Down Payment ($)</string>
-    <string name="loan_term">Loan Term ($)</string>
+    <string name="home_price">Home price ($)</string>
+    <string name="down_payment">Down payment ($)</string>
+    <string name="loan_term">Loan term ($)</string>
     <string name="include_taxes_costs">Include annual tax &amp; costs</string>
     <string name="property_taxes">Property taxes (%)</string>
     <string name="home_insurance">Home insurance ($)</string>
-    <string name="pmi_insurance">PMI Insurance ($)</string>
+    <string name="pmi_insurance">PMI insurance ($)</string>
     <string name="hoa_fee">HOA fee ($)</string>
     <string name="other_costs">Other costs ($)</string>
     <string name="calculate_button">Calculate</string>
-    <string name="interest_rate">Interest Rate (%)</string>
+    <string name="interest_rate">Interest rate (%)</string>
     <string name="loan_term_warning">Loan term must be greater than 0</string>
     <string name="invalid_input_format_warning">Invalid input format</string>
     <string name="empty_fields_warning">Please fill in all fields</string>
+    <string name="loan_amount">Loan amount ($)</string>
+    <string name="year">Year</string>
+    <string name="interest">Interest</string>
+    <string name="principal">Principal</string>
+    <string name="ending_balance">Ending Balance</string>
+    <string name="button_back_to_input">Back to Input</string>
+
 
 </resources>

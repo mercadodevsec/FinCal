@@ -5,15 +5,12 @@ plugins {
 
 android {
     namespace = "com.mercadodevsec.fincal"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.mercadodevsec.fincal"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -44,9 +41,11 @@ dependencies {
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
+    implementation(libs.legacy.support.v4)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.material)
     implementation(libs.material3)
+    implementation(libs.recyclerview)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
