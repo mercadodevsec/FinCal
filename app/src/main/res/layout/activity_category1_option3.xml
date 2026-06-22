@@ -9,16 +9,250 @@
     tools:context=".Category1Option3Activity">
 
     <TextView
-        android:id="@+id/notReadyMessage"
-        android:layout_width="271dp"
-        android:layout_height="91dp"
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/not_available"
+        android:text="@string/calc_mortgage_payoff"
         android:textColor="@color/text_primary"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionsTitle">
+
+        <LinearLayout
+            android:id="@+id/mortgageScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/origLoanAmount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/original_loan_amount"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/origLoanTerm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/original_loan_term"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/interestRate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/interest_rate"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/remainingTerm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/remaining_term"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <TextView
+                android:id="@+id/action_bar_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/repayment_options"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/repaymentRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioPaybackAltogether"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payback_altogether"
+                    android:textColor="@color/text_primary"
+                    app:buttonTint="@color/text_third" />
+
+                <RadioButton
+                    android:id="@+id/radioExtraPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/extra_monthly_payment"
+                    android:textColor="@color/text_primary"
+                    app:buttonTint="@color/text_third" />
+
+                <LinearLayout
+                    android:id="@+id/extraPaymentsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="0dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/perMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/per_month"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/default_value_per_month"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
+
+                    <EditText
+                        android:id="@+id/perYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/per_year"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
+
+                    <EditText
+                        android:id="@+id/oneTimePay"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/one_time"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioBiweekly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/biweekly_payment"
+                    android:textColor="@color/text_primary"
+                    app:buttonTint="@color/text_third" />
+
+                <RadioButton
+                    android:id="@+id/radioNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/normal_repayment"
+                    android:textColor="@color/text_primary"
+                    app:buttonTint="@color/text_third" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_calculate"
+        android:text="@string/calculate_button"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

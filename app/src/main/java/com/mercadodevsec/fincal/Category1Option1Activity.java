@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -68,7 +69,7 @@ public class Category1Option1Activity extends AppCompatActivity {
                     int n = Integer.parseInt(termStr) * 12;
 
                     if (n <= 0) {
-                        resultTextView.setText(getString(R.string.loan_term_warning));
+                        Toast.makeText(this, R.string.loan_term_warning, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -98,12 +99,10 @@ public class Category1Option1Activity extends AppCompatActivity {
                     resultTextView.setText(String.format(Locale.getDefault(), "Result: $%.2f", monthlyPayment));
                     resultTextView.setVisibility(View.VISIBLE);
                 } catch (NumberFormatException e) {
-                    resultTextView.setText(getString(R.string.invalid_input_format_warning));
-                    resultTextView.setVisibility(View.VISIBLE);
+                    Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();
                 }
             } else {
-                resultTextView.setText(getString(R.string.empty_fields_warning));
-                resultTextView.setVisibility(View.VISIBLE);
+                Toast.makeText(this, R.string.empty_fields_warning, Toast.LENGTH_SHORT).show();
             }
         });
     }
