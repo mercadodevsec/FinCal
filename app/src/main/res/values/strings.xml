@@ -26,6 +26,7 @@
     <string name="calc_amortization">Amortization Calculator</string>
     <string name="calc_mortgage_payoff">Mortgage Payoff Calculator</string>
     <string name="calc_house_affordability">House Affordability Calculator</string>
+    <string name="dti_ratio_label">DTI Ratio</string>
     <string name="calc_rent">Rent Calculator</string>
     <string name="calc_debt_income_ratio">Debt-to-Income Ratio Calculator</string>
     <string name="calc_real_estate">Real Estate Calculator</string>
@@ -143,6 +144,27 @@
     <string name="biweekly_payment">Biweekly payment</string>
     <string name="normal_repayment">Normal repayment</string>
     <string name="default_value_per_month">500</string>
+    <string name="annual_household_income">Annual household income ($)</string>
+    <string name="mortgage_loan_term">Mortgage loan term (year)</string>
+    <string name="monthly_debt_payback">Total monthly debt payback ($)</string>
+    <string name="hoa_fee_percent">Hoa fee (%)</string>
+    <string name="down_payment_percent">Down payment (%)</string>
+    <string name="home_insurance_percent">Home insurance (%)</string>
+    <string name="debt_to_income_dti_ratio">Debt-to-income (DTI) ratio</string>
 
 
+    <string-array name="dti_options">
+        <item>Conventional loan (28/36 rule)</item>
+        <item>FHA loan (31% front-end, 43% back-end)</item>
+        <item>VA loan (41%)</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+        <item>35%</item>
+        <item>40%</item>
+        <item>45%</item>
+        <item>50%</item>
+    </string-array>
 </resources>

@@ -9,16 +9,219 @@
     tools:context=".Category1Option4Activity">
 
     <TextView
-        android:id="@+id/notReadyMessage"
-        android:layout_width="271dp"
-        android:layout_height="91dp"
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="@string/not_available"
+        android:text="@string/calc_house_affordability"
         android:textColor="@color/text_primary"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionsTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/annualHouseholdIncome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/annual_household_income"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/loanTerm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/mortgage_loan_term"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/interestRate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/interest_rate"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/monthlyDebtPayback"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/monthly_debt_payback"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/downPayment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/down_payment_percent"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/propertyTaxes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/property_taxes"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/hoaFee"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/hoa_fee_percent"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/homeInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/home_insurance_percent"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <TextView
+                android:id="@+id/dtiLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/debt_to_income_dti_ratio"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/dtiRatioSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/dti_options"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp" />
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/button_calculate"
+        android:text="@string/calculate_button"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
