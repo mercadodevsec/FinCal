@@ -46,7 +46,7 @@
 
                 <EditText
                     android:id="@+id/homePrice"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:background="@drawable/edit_text_border"
                     android:ems="10"
@@ -64,7 +64,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingBottom="10dp">
@@ -89,7 +89,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingBottom="10dp">
@@ -114,7 +114,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingBottom="10dp">
@@ -150,7 +150,7 @@
 
             <LinearLayout
                 android:id="@+id/additionalCostsLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone"
@@ -163,7 +163,7 @@
 
                     <EditText
                         android:id="@+id/propertyTaxes"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"
@@ -185,7 +185,7 @@
 
                     <EditText
                         android:id="@+id/homeInsurance"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"
@@ -206,7 +206,7 @@
 
                     <EditText
                         android:id="@+id/pmiInsurance"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"
@@ -227,7 +227,7 @@
 
                     <EditText
                         android:id="@+id/hoaFee"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"
@@ -248,7 +248,7 @@
 
                     <EditText
                         android:id="@+id/otherCosts"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"

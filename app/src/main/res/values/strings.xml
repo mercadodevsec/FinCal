@@ -151,6 +151,8 @@
     <string name="down_payment_percent">Down payment (%)</string>
     <string name="home_insurance_percent">Home insurance (%)</string>
     <string name="debt_to_income_dti_ratio">Debt-to-income (DTI) ratio</string>
+    <string name="your_annual_pre_tax_income">Your annual pre tax income ($)</string>
+    <string name="your_monthly_debt_payback">Your monthly debt payback ($)</string>
 
 
     <string-array name="dti_options">

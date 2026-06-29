@@ -9,16 +9,101 @@
     tools:context=".Category1Option5Activity">
 
     <TextView
-        android:id="@+id/notReadyMessage"
-        android:layout_width="271dp"
-        android:layout_height="91dp"
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-200dp"
         android:gravity="center"
-        android:text="@string/not_available"
+        android:text="@string/calc_rent"
         android:textColor="@color/text_primary"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/optionsLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/optionsLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionsTitle">
+
+        <EditText
+            android:id="@+id/annualIncome"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/your_annual_pre_tax_income"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint_color" />
+
+        <EditText
+            android:id="@+id/monthlyDebt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/your_monthly_debt_payback"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint_color" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionsLayout"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/button_calculate"
+        android:text="@string/calculate_button"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
