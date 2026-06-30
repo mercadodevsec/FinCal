@@ -2,7 +2,6 @@ package com.mercadodevsec.fincal;
 
 import android.text.Html;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -41,7 +40,7 @@ public class Category1Option4Activity extends AppCompatActivity {
         interestRate = findViewById(R.id.interestRate);
         monthlyDebtPayback = findViewById(R.id.monthlyDebtPayback);
         downPayment = findViewById(R.id.downPayment);
-        propertyTaxes = findViewById(R.id.propertyTaxes);
+        propertyTaxes = findViewById(R.id.propertyTax);
         hoaFee = findViewById(R.id.hoaFee);
         homeInsurance = findViewById(R.id.homeInsurance);
         dtiRatioSpinner = findViewById(R.id.dtiRatioSpinner);
@@ -189,7 +188,6 @@ public class Category1Option4Activity extends AppCompatActivity {
             result.append("Total monthly cost on the house <b>$").append(df.format(totalMonthlyCost)).append("</b>");
 
             resultTextView.setText(Html.fromHtml(result.toString(), Html.FROM_HTML_MODE_LEGACY));
-            resultTextView.setVisibility(View.VISIBLE);
 
         } catch (NumberFormatException e) {
             Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();

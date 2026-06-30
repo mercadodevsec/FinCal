@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="50dp"
         android:text="@string/calc_house_affordability"
         android:textColor="@color/text_primary"
         android:textSize="23sp"
@@ -25,7 +26,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_height="500dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@id/calculateButton"
@@ -119,14 +120,14 @@
                 android:textColorHint="@color/text_hint_color" />
 
             <EditText
-                android:id="@+id/propertyTaxes"
+                android:id="@+id/propertyTax"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
                 android:gravity="center_vertical"
-                android:hint="@string/property_taxes"
+                android:hint="@string/property_tax"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
                 android:paddingStart="5dp"
@@ -183,7 +184,8 @@
                 android:background="@drawable/spinner_background"
                 android:entries="@array/dti_options"
                 android:paddingStart="5dp"
-                android:paddingEnd="5dp" />
+                android:paddingEnd="5dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light" />
 
             <TextView
                 android:id="@+id/resultTextView"
@@ -192,8 +194,7 @@
                 android:layout_marginBottom="20dp"
                 android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:visibility="gone"
-                tools:visibility="visible" />
+                 />
 
         </LinearLayout>
     </ScrollView>

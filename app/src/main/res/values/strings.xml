@@ -116,7 +116,7 @@
     <string name="down_payment">Down payment ($)</string>
     <string name="loan_term">Loan term (year)</string>
     <string name="include_taxes_costs">Include annual tax &amp; costs</string>
-    <string name="property_taxes">Property taxes (%)</string>
+    <string name="property_tax">Property tax (%)</string>
     <string name="home_insurance">Home insurance ($)</string>
     <string name="pmi_insurance">PMI insurance ($)</string>
     <string name="hoa_fee">HOA fee ($)</string>
@@ -151,8 +151,23 @@
     <string name="down_payment_percent">Down payment (%)</string>
     <string name="home_insurance_percent">Home insurance (%)</string>
     <string name="debt_to_income_dti_ratio">Debt-to-income (DTI) ratio</string>
-    <string name="your_annual_pre_tax_income">Your annual pre tax income ($)</string>
+    <string name="your_annual_pre_tax_income">Your annual pre-tax income ($)</string>
     <string name="your_monthly_debt_payback">Your monthly debt payback ($)</string>
+    <string name="income_before_tax"><![CDATA[Annual Income & Savings (Before Tax)]]></string>
+    <string name="debts_expenses">Monthly Debts / Expenses</string>
+    <string name="mortgage_payment">Mortgage payment</string>
+    <string name="other_income">Other income</string>
+    <string name="investment_amp_savings"><![CDATA[Investment & savings]]></string>
+    <string name="pension_amp_social_security"><![CDATA[Pension & social security]]></string>
+    <string name="salary_amp_earned_income"><![CDATA[Salary & earned income]]></string>
+    <string name="rental_cost">Rental cost</string>
+    <string name="homeowner_insurance">Homeowner insurance</string>
+    <string name="property_tax_no_percent">Property tax</string>
+    <string name="credit_cards">Credit cards</string>
+    <string name="student_loan">Student loan</string>
+    <string name="auto_loan">Auto loan</string>
+    <string name="other_loans_amp_liabilities"><![CDATA[Other loans & liabilities]]></string>
+    <string name="hoa_fee_no_sign">HOA fee</string>
 
 
     <string-array name="dti_options">

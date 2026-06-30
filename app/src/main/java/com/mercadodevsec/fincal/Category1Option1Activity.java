@@ -48,7 +48,7 @@ public class Category1Option1Activity extends AppCompatActivity {
         EditText downPayment = findViewById(R.id.downPayment);
         EditText loanTerm = findViewById(R.id.loanTerm);
         EditText interestRate = findViewById(R.id.interestRate);
-        EditText propertyTax = findViewById(R.id.propertyTaxes);
+        EditText propertyTax = findViewById(R.id.propertyTax);
         EditText homeInsurance = findViewById(R.id.homeInsurance);
         EditText pmiInsurance = findViewById(R.id.pmiInsurance);
         EditText hoaFee = findViewById(R.id.hoaFee);
