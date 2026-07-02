@@ -97,7 +97,7 @@ public class Category1Option1Activity extends AppCompatActivity {
                         monthlyPayment += tax + ins + pmi + hoa + other;
                     }
 
-                    String resultText = String.format(Locale.getDefault(), "Result: <b>$%.2f</b>", monthlyPayment);
+                    String resultText = String.format(Locale.getDefault(), "Monthly mortgage payment: <b>$%.2f</b>", monthlyPayment);
                     resultTextView.setText(Html.fromHtml(resultText, Html.FROM_HTML_MODE_LEGACY));
                 } catch (NumberFormatException e) {
                     Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();

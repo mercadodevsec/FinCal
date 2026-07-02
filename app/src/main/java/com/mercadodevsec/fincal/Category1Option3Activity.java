@@ -127,14 +127,16 @@ public class Category1Option3Activity extends AppCompatActivity {
                 SimulationResult original = simulate(currentBalance, monthlyPayment, rateMonth, 0, 0, 0, false);
                 SimulationResult modified = simulate(currentBalance, monthlyPayment, rateMonth, extraM, extraY, extraO, isBiweekly);
 
-                String sb = "Original Plan:\n" +
-                        "Total Payments: <b>$" + df.format(original.totalPaid) + "</b>\n" +
-                        "Total Interest: $" + df.format(original.totalInterest) + "\n" +
-                        "Payoff in: " + formatMonths(original.months) + "\n\n" +
-                        "New Plan:\n" +
-                        "Total Payments: <b>$" + df.format(modified.totalPaid) + "</b>\n" +
-                        "Total Interest: $" + df.format(modified.totalInterest) + "\n" +
-                        "Payoff in: " + formatMonths(modified.months);
+                String sb = "<b>Original Plan:</b><br>" +
+                        "Total Payments: <b>$" + df.format(original.totalPaid) + "</b><br>" +
+                        "Total Interest: $" + df.format(original.totalInterest) + "<br>" +
+                        "Payoff in: " + formatMonths(original.months) + "<br><br>" +
+                        "<b>New Plan:</b><br>" +
+                        "Total Payments: <b>$" + df.format(modified.totalPaid) + "</b><br>" +
+                        "Total Interest: $" + df.format(modified.totalInterest) + "<br>" +
+                        "Payoff in: " + formatMonths(modified.months) + "<br><br>" +
+                        "Total Interest Saved: <b>$" + df.format(original.totalInterest - modified.totalInterest) + "</b><br>" +
+                        "Time Saved: <b>" + formatMonths(original.months - modified.months) + "</b>";
 
                 resultTextView.setText(android.text.Html.fromHtml(sb, android.text.Html.FROM_HTML_MODE_LEGACY));
             }
