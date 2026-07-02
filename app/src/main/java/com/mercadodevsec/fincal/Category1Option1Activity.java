@@ -2,6 +2,7 @@ package com.mercadodevsec.fincal;
 
 import android.os.Bundle;
 
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -96,8 +97,8 @@ public class Category1Option1Activity extends AppCompatActivity {
                         monthlyPayment += tax + ins + pmi + hoa + other;
                     }
 
-                    resultTextView.setText(String.format(Locale.getDefault(), "Result: $%.2f", monthlyPayment));
-                    resultTextView.setVisibility(View.VISIBLE);
+                    String resultText = String.format(Locale.getDefault(), "Result: <b>$%.2f</b>", monthlyPayment);
+                    resultTextView.setText(Html.fromHtml(resultText, Html.FROM_HTML_MODE_LEGACY));
                 } catch (NumberFormatException e) {
                     Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();
                 }

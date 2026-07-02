@@ -128,15 +128,15 @@ public class Category1Option3Activity extends AppCompatActivity {
                 SimulationResult modified = simulate(currentBalance, monthlyPayment, rateMonth, extraM, extraY, extraO, isBiweekly);
 
                 String sb = "Original Plan:\n" +
-                        "Total Payments: $" + df.format(original.totalPaid) + "\n" +
+                        "Total Payments: <b>$" + df.format(original.totalPaid) + "</b>\n" +
                         "Total Interest: $" + df.format(original.totalInterest) + "\n" +
                         "Payoff in: " + formatMonths(original.months) + "\n\n" +
                         "New Plan:\n" +
-                        "Total Payments: $" + df.format(modified.totalPaid) + "\n" +
+                        "Total Payments: <b>$" + df.format(modified.totalPaid) + "</b>\n" +
                         "Total Interest: $" + df.format(modified.totalInterest) + "\n" +
                         "Payoff in: " + formatMonths(modified.months);
 
-                resultTextView.setText(sb);
+                resultTextView.setText(android.text.Html.fromHtml(sb, android.text.Html.FROM_HTML_MODE_LEGACY));
             }
 
         } catch (NumberFormatException e) {
