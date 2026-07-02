@@ -29,7 +29,6 @@
     <string name="dti_ratio_label">DTI Ratio</string>
     <string name="calc_rent">Rent Calculator</string>
     <string name="calc_debt_income_ratio">Debt-to-Income Ratio Calculator</string>
-    <string name="calc_real_estate">Real Estate Calculator</string>
     <string name="calc_refinance">Refinance Calculator</string>
     <string name="calc_rental_property">Rental Property Calculator</string>
     <string name="calc_apr">APR Calculator</string>
@@ -168,6 +167,16 @@
     <string name="auto_loan">Auto loan</string>
     <string name="other_loans_amp_liabilities"><![CDATA[Other loans & liabilities]]></string>
     <string name="hoa_fee_no_sign">HOA fee</string>
+    <string name="current_loan">Current loan</string>
+    <string name="new_loan">New loan</string>
+    <string name="monthly_payment">Monthly payment ($)</string>
+    <string name="remaining_balance">Remaining balance ($)</string>
+    <string name="time_remaining_year">Time remaining (year)</string>
+    <string name="new_loan_term_year">New loan term (year)</string>
+    <string name="points_discount_points">Points (discount points)</string>
+    <string name="costs_amp_fees"><![CDATA[Costs & fees ($)]]></string>
+    <string name="cash_out_amount">Cash out amount ($)</string>
+    <string name="amount_dollar">Amount ($)</string>
 
 
     <string-array name="dti_options">
@@ -183,5 +192,15 @@
         <item>40%</item>
         <item>45%</item>
         <item>50%</item>
+    </string-array>
+
+    <string-array name="ref_options">
+        <item>I know my remaining balance</item>
+        <item>I know the original loan amount</item>
+           </string-array>
+
+    <string-array name="cash_ref_options">
+        <item>Cash-out refinance</item>
+        <item>Cash-in refinance</item>
     </string-array>
 </resources>

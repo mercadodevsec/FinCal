@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -68,35 +69,40 @@ public class Category1Option6Activity extends AppCompatActivity {
                 return;
             }
 
-            double monthlyIncome = totalAnnualIncome / 12.0;
-            double frontEndDti = (monthlyHousingDebt / monthlyIncome) * 100.0;
-            double backEndDti = (totalMonthlyDebt / monthlyIncome) * 100.0;
-
-            String statusMessage;
-            if (backEndDti <= 35) {
-                statusMessage = "Your DTI ratio is <b>good</b>.";
-            } else if (backEndDti < 50) {
-                statusMessage = "Your DTI ratio is in the <b>mid-range</b>. While it is not considered low, certain actions can be taken to lower it.";
-            } else {
-                statusMessage = "Your DTI ratio is <b>high</b>, and may put you in more financially-risky situations. We recommend taking actions to lower it.";
-            }
-
-            DecimalFormat df = new DecimalFormat("#,##0");
-            DecimalFormat pf = new DecimalFormat("0");
-
-            String result = "Front-End DTI: <b>" + pf.format(frontEndDti) + "%</b><br/>" +
-                    "Back-End DTI: <b>" + pf.format(backEndDti) + "%</b>.<br/>" +
-                    statusMessage + "<br/><br/>" +
-                    "Total Income:\t$" + df.format(totalAnnualIncome) + " / year or<br/>" +
-                    "$" + df.format(monthlyIncome) + " / month<br/><br/>" +
-                    "Total Debt:\t$" + df.format(totalMonthlyDebt * 12) + " / year or<br/>" +
-                    "$" + df.format(totalMonthlyDebt) + " / month";
+            String result = getResult(totalAnnualIncome, monthlyHousingDebt, totalMonthlyDebt);
 
             resultTextView.setText(Html.fromHtml(result, Html.FROM_HTML_MODE_LEGACY));
 
         } catch (Exception e) {
             Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @NonNull
+    private static String getResult(double totalAnnualIncome, double monthlyHousingDebt, double totalMonthlyDebt) {
+        double monthlyIncome = totalAnnualIncome / 12.0;
+        double frontEndDti = (monthlyHousingDebt / monthlyIncome) * 100.0;
+        double backEndDti = (totalMonthlyDebt / monthlyIncome) * 100.0;
+
+        String statusMessage;
+        if (backEndDti <= 35) {
+            statusMessage = "Your DTI ratio is <b>good</b>.";
+        } else if (backEndDti < 50) {
+            statusMessage = "Your DTI ratio is in the <b>mid-range</b>. While it is not considered low, certain actions can be taken to lower it.";
+        } else {
+            statusMessage = "Your DTI ratio is <b>high</b>, and may put you in more financially-risky situations. We recommend taking actions to lower it.";
+        }
+
+        DecimalFormat df = new DecimalFormat("#,##0");
+        DecimalFormat pf = new DecimalFormat("0");
+
+        return "Front-End DTI: <b>" + pf.format(frontEndDti) + "%</b><br/>" +
+                "Back-End DTI: <b>" + pf.format(backEndDti) + "%</b>.<br/>" +
+                statusMessage + "<br/><br/>" +
+                "Total Income:\t$" + df.format(totalAnnualIncome) + " / year or<br/>" +
+                "$" + df.format(monthlyIncome) + " / month<br/><br/>" +
+                "Total Debt:\t$" + df.format(totalMonthlyDebt * 12) + " / year or<br/>" +
+                "$" + df.format(totalMonthlyDebt) + " / month";
     }
 
     private double getDouble(EditText editText) {

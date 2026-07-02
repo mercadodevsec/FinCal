@@ -38,317 +38,197 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_interest"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_investment"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_finance"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_compound_interest"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_interest"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_interest_rate"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_investment"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_savings"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_finance"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_simple_interest"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_compound_interest"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_cd"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_interest_rate"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_bond"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_savings"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_mutual_fund"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_simple_interest"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_average_return"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_cd"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_irr"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_bond"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_roi"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_mutual_fund"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_payback_period"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_average_return"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_present_value"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_irr"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_future_value"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
+            <Button
+                android:id="@+id/option13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_roi"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-            </LinearLayout>
+            <Button
+                android:id="@+id/option14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_payback_period"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/option15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_present_value"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/option16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_future_value"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>

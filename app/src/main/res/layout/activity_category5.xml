@@ -38,103 +38,65 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_income_tax"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_salary"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_marriage_tax"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/option4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_estate_tax"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/option1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_income_tax"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/option5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/button_scroll"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/calc_take_home_paycheck"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="20sp" />
+            <Button
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_salary"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
-            </LinearLayout>
+            <Button
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_marriage_tax"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_estate_tax"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/option5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/button_scroll"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/calc_take_home_paycheck"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>

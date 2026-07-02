@@ -39,7 +39,6 @@ public class Category1Activity extends AppCompatActivity {
         SetupButton(R.id.option13, Category1Option13Activity.class);
         SetupButton(R.id.option14, Category1Option14Activity.class);
         SetupButton(R.id.option15, Category1Option15Activity.class);
-        SetupButton(R.id.option16, Category1Option16Activity.class);
     }
 
     private void SetupButton(int buttonID, Class<?> activityClass) {

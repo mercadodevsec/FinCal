@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/loanAmount"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/edit_text_border"
@@ -43,7 +43,7 @@
 
     <EditText
         android:id="@+id/loanTerm"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_border"
@@ -62,7 +62,7 @@
 
     <EditText
         android:id="@+id/interestRate"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_border"
