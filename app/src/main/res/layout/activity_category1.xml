@@ -144,7 +144,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_rent_buy"
+                android:text="@string/calc_rental_property"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -156,7 +156,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_rental_property"
+                android:text="@string/calc_apr"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -168,7 +168,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_apr"
+                android:text="@string/calc_fha_loan"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -180,7 +180,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_fha_loan"
+                android:text="@string/calc_va_mortgage"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -192,7 +192,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_va_mortgage"
+                android:text="@string/calc_home_equity_loan"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -204,7 +204,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_home_equity_loan"
+                android:text="@string/calc_heloc"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -216,7 +216,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_heloc"
+                android:text="@string/calc_down_payment"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 
@@ -228,7 +228,7 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/button_scroll"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/calc_down_payment"
+                android:text="@string/calc_rent_buy"
                 android:textColor="@color/text_secondary"
                 android:textSize="20sp" />
 

@@ -103,7 +103,7 @@
 
             <CheckBox
                 android:id="@+id/includeTaxesCheckBox"
-                android:layout_width="320dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/include_taxes_costs"
                 android:textColor="@color/text_primary"

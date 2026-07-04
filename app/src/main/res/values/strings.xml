@@ -129,7 +129,7 @@
     <string name="year">Year</string>
     <string name="interest">Interest</string>
     <string name="principal">Principal</string>
-    <string name="ending_balance">Ending Balance</string>
+    <string name="ending_balance">Ending balance</string>
     <string name="button_back_to_input">Back to Input</string>
     <string name="original_loan_amount">Original loan amount ($)</string>
     <string name="original_loan_term">Original loan term (year)</string>
@@ -177,6 +177,33 @@
     <string name="costs_amp_fees"><![CDATA[Costs & fees ($)]]></string>
     <string name="cash_out_amount">Cash out amount ($)</string>
     <string name="amount_dollar">Amount ($)</string>
+    <string name="purchase">Purchase</string>
+    <string name="use_loan">Use loan?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="closing_cost_dollar">Closing cost ($)</string>
+    <string name="need_repairs">Need repairs?</string>
+    <string name="repair_cost">Repair cost ($)</string>
+    <string name="value_after_repairs">Value after repairs ($)</string>
+    <string name="recurring_operating_expenses">Recurring Operating Expenses</string>
+    <string name="annual">Annual</string>
+    <string name="annual_increase">Annual\nIncrease</string>
+    <string name="percent">%</string>
+    <string name="total_insurance">Total insurance (%)</string>
+    <string name="hoa_fee_dollar">HOA fee ($)</string>
+    <string name="maintenance">Maintenance ($)</string>
+    <string name="income">Income</string>
+    <string name="monthly_rent">Monthly rent ($)</string>
+    <string name="other_monthly_income">Other monthly income ($)</string>
+    <string name="vacancy_rate">Vacancy rate (%)</string>
+    <string name="management_fee">Management fee (%)</string>
+    <string name="sell">Sell</string>
+    <string name="do_you_know_the_sell_price">Do you know the sell price?</string>
+    <string name="holding_length_year">Holding length (year)</string>
+    <string name="value_appreciation_per_year">Value appreciation (per year %)</string>
+    <string name="cost_to_sell">Cost to sell (%)</string>
+    <string name="sell_price">Sell price ($)</string>
+    <string name="purchase_price">Purchase price ($)</string>
 
 
     <string-array name="dti_options">
