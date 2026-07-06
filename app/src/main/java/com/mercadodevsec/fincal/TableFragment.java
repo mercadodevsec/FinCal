@@ -51,7 +51,7 @@ public class TableFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_table, container, false);
+        View view = inflater.inflate(R.layout.fragment_amortize_table, container, false);
 
         TableLayout table = view.findViewById(R.id.amortizationTable);
         Button btnBack = view.findViewById(R.id.btnBackToInput);
@@ -108,18 +108,20 @@ public class TableFragment extends Fragment {
         TableRow row = new TableRow(getContext());
         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
 
-        row.addView(createTextView(String.valueOf(year)));
-        row.addView(createTextView(String.format(Locale.US, "%.2f", interest)));
-        row.addView(createTextView(String.format(Locale.US, "%.2f", principal)));
-        row.addView(createTextView(String.format(Locale.US, "%.2f", balance)));
+        row.addView(createTextView(String.valueOf(year), 71));
+        row.addView(createTextView(String.format(Locale.US, "%.2f", interest), 92));
+        row.addView(createTextView(String.format(Locale.US, "%.2f", principal), 98));
+        row.addView(createTextView(String.format(Locale.US, "%.2f", balance), 140));
 
         table.addView(row);
     }
 
-    private TextView createTextView(String text) {
+    private TextView createTextView(String text, int width) {
         TextView tv = new TextView(getContext());
         tv.setText(text);
-        tv.setPadding(8, 8, 8, 8);
+        float scale = getResources().getDisplayMetrics().density;
+        tv.setWidth((int) (width * scale + 0.5f));
+        tv.setPadding(0, 8, 0, 8);
         tv.setGravity(Gravity.CENTER);
         tv.setTextColor(getResources().getColor(R.color.text_primary, null));
         return tv;

@@ -409,7 +409,8 @@
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:textColor="@color/text_primary"
-                        android:textColorHint="@color/text_hint_color" />
+                        android:textColorHint="@color/text_hint_color"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                 </LinearLayout>
 
@@ -596,6 +597,7 @@
                         android:ems="10"
                         android:gravity="center_vertical"
                         android:hint="@string/other_monthly_income"
+                        android:textSize="16sp"
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:paddingStart="5dp"
