@@ -124,7 +124,7 @@
     <string name="interest_rate">Interest rate (%)</string>
     <string name="loan_term_warning">Loan term must be greater than 0</string>
     <string name="invalid_input_format_warning">Invalid input format</string>
-    <string name="empty_fields_warning">Please fill in all fields</string>
+    <string name="empty_fields_warning">Please fill in all required fields</string>
     <string name="loan_amount">Loan amount ($)</string>
     <string name="year">Year</string>
     <string name="interest">Interest</string>
@@ -204,6 +204,7 @@
     <string name="cost_to_sell">Cost to sell (%)</string>
     <string name="sell_price">Sell price ($)</string>
     <string name="purchase_price">Purchase price ($)</string>
+    <string name="first_year_income_and_expense">First Year Income and Expense</string>
 
 
     <string-array name="dti_options">

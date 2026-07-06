@@ -65,10 +65,10 @@ public class RentalResultFragment extends Fragment {
     }
 
     private void populateMultiYearTable(TableLayout table) {
-        addResultRow(table, "Return (IRR):", (String) mResults.get("irr"), true);
-        addResultRow(table, "Total Profit when Sold:", (String) mResults.get("totalProfit"), false);
-        addResultRow(table, "Cash on Cash Return:", (String) mResults.get("cashOnCash"), false);
-        addResultRow(table, "Capitalization Rate:", (String) mResults.get("capRate"), false);
+        addResultRow(table, "Annual Return (IRR):", (String) mResults.get("irr"), true);
+        addResultRow(table, "Total Profit when Sold:", (String) mResults.get("totalProfit"), true);
+        addResultRow(table, "Cash on Cash Return:", (String) mResults.get("cashOnCash"), true);
+        addResultRow(table, "Capitalization Rate:", (String) mResults.get("capRate"), true);
         addResultRow(table, "Total Rental Income:", (String) mResults.get("totalRentalIncome"), false);
         addResultRow(table, "Total Mortgage Payments:", (String) mResults.get("totalMortgagePayments"), false);
         addResultRow(table, "Total Expenses:", (String) mResults.get("totalExpenses"), false);
@@ -86,10 +86,12 @@ public class RentalResultFragment extends Fragment {
         addFirstYearRow(table, "Income:", (String) mResults.get("grossMonthlyIncome"), (String) mResults.get("grossAnnualIncome"), false);
         addFirstYearRow(table, "Mortgage Pay:", (String) mResults.get("monthlyMortgage"), (String) mResults.get("annualMortgage"), false);
         addFirstYearRow(table, "Vacancy (" + mResults.get("vRate") + "%):", (String) mResults.get("vacancyMonthly"), (String) mResults.get("vacancyAnnual"), false);
-        addFirstYearRow(table, "Property Tax:", (String) mResults.get("propertyTaxMonthly"), (String) mResults.get("pTaxes"), false);
-        addFirstYearRow(table, "Total Insurance:", (String) mResults.get("insuranceMonthly"), (String) mResults.get("tInsurance"), false);
-        addFirstYearRow(table, "Maintenance Cost:", (String) mResults.get("maintenanceMonthly"), (String) mResults.get("maint"), false);
-        addFirstYearRow(table, "Other Cost:", (String) mResults.get("otherCostsMonthly"), (String) mResults.get("oCosts"), false);
+        addFirstYearRow(table, "Management Fee (" + mResults.get("mFee") + "%):", (String) mResults.get("managementMonthly"), (String) mResults.get("managementAnnual"), false);
+        addFirstYearRow(table, "Property Tax:", (String) mResults.get("propertyTaxMonthly"), (String) mResults.get("propertyTaxAnnual"), false);
+        addFirstYearRow(table, "Total Insurance:", (String) mResults.get("insuranceMonthly"), (String) mResults.get("insuranceAnnual"), false);
+        addFirstYearRow(table, "HOA Fee:", (String) mResults.get("hoaMonthly"), (String) mResults.get("hoaAnnual"), false);
+        addFirstYearRow(table, "Maintenance Cost:", (String) mResults.get("maintenanceMonthly"), (String) mResults.get("maintenanceAnnual"), false);
+        addFirstYearRow(table, "Other Cost:", (String) mResults.get("otherCostsMonthly"), (String) mResults.get("otherCostsAnnual"), false);
         addFirstYearRow(table, "Cash Flow:", (String) mResults.get("cashFlowMonthly"), (String) mResults.get("cashFlowAnnual"), true);
         addFirstYearRow(table, "Net Operating Income (NOI):", (String) mResults.get("netOperatingIncomeMonthly"), (String) mResults.get("netOperatingIncomeAnnual"), false);
     }
@@ -97,13 +99,13 @@ public class RentalResultFragment extends Fragment {
     private void addResultRow(TableLayout table, String label, String value, boolean colorize) {
         TableRow row = new TableRow(getContext());
         row.addView(createTextView(label, false, false));
-        row.addView(createTextView(value, false, colorize));
+        row.addView(createTextView(value, colorize, colorize));
         table.addView(row);
     }
 
     private void addFirstYearRow(TableLayout table, String label, String monthly, String annual, boolean isCashFlow) {
         TableRow row = new TableRow(getContext());
-        row.addView(createTextView(label, isCashFlow, false));
+        row.addView(createTextView(label, false, false));
         row.addView(createTextView(monthly, isCashFlow, isCashFlow));
         row.addView(createTextView(annual, isCashFlow, isCashFlow));
         table.addView(row);

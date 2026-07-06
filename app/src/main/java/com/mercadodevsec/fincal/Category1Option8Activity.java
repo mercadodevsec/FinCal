@@ -135,10 +135,18 @@ public class Category1Option8Activity extends AppCompatActivity {
     }
 
     private void calculateRental() {
-        if (purchasePrice.getText().toString().isEmpty() ||
-                monthlyRent.getText().toString().isEmpty() ||
-                holdingLength.getText().toString().isEmpty()) {
-            Toast.makeText(this, R.string.empty_fields_warning, Toast.LENGTH_SHORT).show();
+        if (purchasePrice.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please fill in purchase price field", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (monthlyRent.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please fill in monthly rent field", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (holdingLength.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please fill in holding length field", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -215,10 +223,11 @@ public class Category1Option8Activity extends AppCompatActivity {
             double hoaMonthly = hFee / 12;
             double maintenanceMonthly = maint / 12;
             double otherCostsMonthly = oCosts / 12;
-            double managementMonthly = (grossMonthlyIncome * mFee / 100);
+            double managementMonthly = (grossMonthlyIncome - vacancyMonthly) * mFee / 100;
+            double managementAnnual = managementMonthly * 12;
 
-            double totalOperatingExpensesMonthly = propertyTaxMonthly + insuranceMonthly + hoaMonthly + maintenanceMonthly + otherCostsMonthly + managementMonthly;
-            double netOperatingIncomeMonthly = (grossMonthlyIncome - vacancyMonthly) - totalOperatingExpensesMonthly;
+            double totalOperatingExpensesMonthly = propertyTaxMonthly + insuranceMonthly + hoaMonthly + maintenanceMonthly + otherCostsMonthly;
+            double netOperatingIncomeMonthly = (grossMonthlyIncome - vacancyMonthly - managementMonthly) - totalOperatingExpensesMonthly;
             double netOperatingIncomeAnnual = netOperatingIncomeMonthly * 12;
 
             double cashFlowMonthly = netOperatingIncomeMonthly - monthlyMortgage;
@@ -243,17 +252,17 @@ public class Category1Option8Activity extends AppCompatActivity {
             double initialInvestment = (useLoan ? (pPrice * dPaymentPct / 100) : pPrice) + cCosts + rCosts;
             cashFlows.add(-initialInvestment);
 
-            for (int i = 1; i <= (int)hLength; i++) {
+            for (int i = 1; i <= (int) hLength; i++) {
                 double yearGrossIncome = (currentMRent + currentOIncome) * 12;
                 double yearVacancy = (yearGrossIncome * vRate / 100);
-                double yearManagement = (yearGrossIncome * mFee / 100);
-                double yearOperatingExpenses = currentPTaxes + currentTInsurance + currentHFee + currentMaint + currentOCosts + yearManagement;
-                double yearNOI = (yearGrossIncome - yearVacancy) - yearOperatingExpenses;
+                double yearManagement = (yearGrossIncome - yearVacancy) * mFee / 100;
+                double yearOperatingExpenses = currentPTaxes + currentTInsurance + currentHFee + currentMaint + currentOCosts;
+                double yearNOI = (yearGrossIncome - yearVacancy - yearManagement) - yearOperatingExpenses;
                 double yearCashFlow = yearNOI - annualMortgage;
 
-                totalRentalIncome += yearGrossIncome;
+                totalRentalIncome += (yearGrossIncome - yearVacancy - yearManagement);
                 totalMortgagePayments += annualMortgage;
-                totalExpenses += yearOperatingExpenses + yearVacancy;
+                totalExpenses += yearOperatingExpenses;
                 totalNOI += yearNOI;
                 totalCashFlow += yearCashFlow;
 
@@ -286,11 +295,11 @@ public class Category1Option8Activity extends AppCompatActivity {
 
             double totalProfit = totalCashFlow + netProceeds - initialInvestment;
             double irr = calculateIRR(cashFlows);
-            double cashOnCash = (totalCashFlow / initialInvestment) * 100;
+            double cashOnCash = (totalProfit / initialInvestment) * 100;
             double capRate = (netOperatingIncomeAnnual / pPrice) * 100;
 
             HashMap<String, Object> results = new HashMap<>();
-            results.put("hLength", (int)hLength);
+            results.put("hLength", (int) hLength);
             results.put("irr", String.format(Locale.US, "%.2f%%", irr * 100));
             results.put("totalProfit", formatCurrency(totalProfit));
             results.put("cashOnCash", String.format(Locale.US, "%.2f%%", cashOnCash));
@@ -299,22 +308,26 @@ public class Category1Option8Activity extends AppCompatActivity {
             results.put("totalMortgagePayments", formatCurrency(totalMortgagePayments));
             results.put("totalExpenses", formatCurrency(totalExpenses));
             results.put("totalNOI", formatCurrency(totalNOI));
-            
             results.put("grossMonthlyIncome", formatCurrency(grossMonthlyIncome));
             results.put("grossAnnualIncome", formatCurrency(grossAnnualIncome));
             results.put("monthlyMortgage", formatCurrency(monthlyMortgage));
             results.put("annualMortgage", formatCurrency(annualMortgage));
-            results.put("vRate", (int)vRate);
+            results.put("vRate", (int) vRate);
             results.put("vacancyMonthly", formatCurrency(vacancyMonthly));
             results.put("vacancyAnnual", formatCurrency(vacancyAnnual));
+            results.put("mFee", (int) mFee);
+            results.put("managementMonthly", formatCurrency(managementMonthly));
+            results.put("managementAnnual", formatCurrency(managementAnnual));
             results.put("propertyTaxMonthly", formatCurrency(propertyTaxMonthly));
-            results.put("pTaxes", formatCurrency(pTaxes));
+            results.put("propertyTaxAnnual", formatCurrency(pTaxes));
             results.put("insuranceMonthly", formatCurrency(insuranceMonthly));
-            results.put("tInsurance", formatCurrency(tInsurance));
+            results.put("insuranceAnnual", formatCurrency(tInsurance));
+            results.put("hoaMonthly", formatCurrency(hoaMonthly));
+            results.put("hoaAnnual", formatCurrency(hFee));
             results.put("maintenanceMonthly", formatCurrency(maintenanceMonthly));
-            results.put("maint", formatCurrency(maint));
+            results.put("maintenanceAnnual", formatCurrency(maint));
             results.put("otherCostsMonthly", formatCurrency(otherCostsMonthly));
-            results.put("oCosts", formatCurrency(oCosts));
+            results.put("otherCostsAnnual", formatCurrency(oCosts));
             results.put("cashFlowMonthly", formatCurrency(cashFlowMonthly));
             results.put("cashFlowAnnual", formatCurrency(cashFlowAnnual));
             results.put("netOperatingIncomeMonthly", formatCurrency(netOperatingIncomeMonthly));
