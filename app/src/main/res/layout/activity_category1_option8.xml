@@ -775,15 +775,6 @@
                 android:textColor="@color/text_primary"
                 android:textColorHint="@color/text_hint_color" />
 
-            <TextView
-                android:id="@+id/resultTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:typeface="monospace"
-                android:textColor="@color/text_primary"
-                android:textSize="14sp" />
-
         </LinearLayout>
 
     </ScrollView>

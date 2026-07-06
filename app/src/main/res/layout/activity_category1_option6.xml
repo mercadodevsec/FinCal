@@ -38,13 +38,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:text="@string/income_before_tax"
-                android:textColor="@color/text_primary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/text_fourth"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_secondary"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/salaryIncome"
@@ -111,11 +115,15 @@
                 android:textColorHint="@color/text_hint_color" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:text="@string/debts_expenses"
-                android:textColor="@color/text_primary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/text_fourth"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_secondary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -175,7 +183,7 @@
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
                 android:gravity="center_vertical"
-                android:hint="@string/hoa_fee_no_sign"
+                android:hint="@string/hoa_fee"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
                 android:paddingStart="5dp"
