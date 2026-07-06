@@ -55,6 +55,9 @@ public class Category1Option1Activity extends AppCompatActivity {
         EditText hoaFee = findViewById(R.id.hoaFee);
         EditText otherCost = findViewById(R.id.otherCosts);
 
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
+
         calculateButton.setOnClickListener(v -> {
             String priceStr = homePrice.getText().toString();
             String downPaymentStr = downPayment.getText().toString();

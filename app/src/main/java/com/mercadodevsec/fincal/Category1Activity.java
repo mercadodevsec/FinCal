@@ -23,7 +23,7 @@ public class Category1Activity extends AppCompatActivity {
             return insets;
         });
 
-        SetupButton(R.id.backButton, CategoryOptionsActivity.class);
+        findViewById(R.id.backButton).setOnClickListener(v -> finish());
         SetupButton(R.id.option1, Category1Option1Activity.class);
         SetupButton(R.id.option2, Category1Option2Activity.class);
         SetupButton(R.id.option3, Category1Option3Activity.class);

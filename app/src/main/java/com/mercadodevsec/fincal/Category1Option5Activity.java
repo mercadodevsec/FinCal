@@ -37,6 +37,8 @@ public class Category1Option5Activity extends AppCompatActivity {
         monthlyDebtEditText = findViewById(R.id.monthlyDebt);
         resultTextView = findViewById(R.id.resultTextView);
         Button calculateButton = findViewById(R.id.calculateButton);
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
 
         calculateButton.setOnClickListener(v -> calculateRent());
     }

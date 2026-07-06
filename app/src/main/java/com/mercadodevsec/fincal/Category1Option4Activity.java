@@ -46,6 +46,8 @@ public class Category1Option4Activity extends AppCompatActivity {
         dtiRatioSpinner = findViewById(R.id.dtiRatioSpinner);
         resultTextView = findViewById(R.id.resultTextView);
         Button calculateButton = findViewById(R.id.calculateButton);
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
 
         calculateButton.setOnClickListener(v -> calculate());
     }

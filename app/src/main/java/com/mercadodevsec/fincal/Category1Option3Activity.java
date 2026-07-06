@@ -48,6 +48,9 @@ public class Category1Option3Activity extends AppCompatActivity {
         extraPaymentsContainer = findViewById(R.id.extraPaymentsContainer);
         resultTextView = findViewById(R.id.resultTextView);
         Button calculateButton = findViewById(R.id.calculateButton);
+        Button backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(v -> finish());
 
         repaymentRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.radioExtraPayment) {

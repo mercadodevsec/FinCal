@@ -52,6 +52,8 @@ public class Category1Option6Activity extends AppCompatActivity {
 
         resultTextView = findViewById(R.id.resultTextView);
         Button calculateButton = findViewById(R.id.calculateButton);
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
 
         calculateButton.setOnClickListener(v -> calculateDTI());
     }

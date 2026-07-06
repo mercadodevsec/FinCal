@@ -36,7 +36,10 @@ public class Category1Option2Activity extends AppCompatActivity {
         loanTerm = findViewById(R.id.loanTerm);
         interestRate = findViewById(R.id.interestRate);
         Button calculateButton = findViewById(R.id.calculateButton);
+        Button backButton = findViewById(R.id.backButton);
         fragmentContainer = findViewById(R.id.fragment_container);
+
+        backButton.setOnClickListener(v -> finish());
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override

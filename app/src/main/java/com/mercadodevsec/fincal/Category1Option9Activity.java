@@ -64,6 +64,8 @@ public class Category1Option9Activity extends AppCompatActivity {
         pmiInsurance = findViewById(R.id.pmiInsurance);
         resultContainer = findViewById(R.id.resultContainer);
         calculateButton = findViewById(R.id.calculateButton);
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void setupSpinner() {
@@ -233,12 +235,12 @@ public class Category1Option9Activity extends AppCompatActivity {
                     double x = (targetBalance - mr) / (loanAmt - mr);
                     if (x > 1) {
                         double m = Math.log(x) / Math.log(1 + periodicRate);
-                        pmiMonths = (int) m; // Using floor to match target output
+                        pmiMonths = (int) m;
                         if (pmiMonths > totalPaymentsCount) pmiMonths = totalPaymentsCount;
                     }
                 } else {
                     double m = (loanAmt - targetBalance) / piPayment;
-                    pmiMonths = (int) m; // Using floor to match target output
+                    pmiMonths = (int) m;
                     if (pmiMonths < 0) pmiMonths = 0;
                     if (pmiMonths > totalPaymentsCount) pmiMonths = totalPaymentsCount;
                 }

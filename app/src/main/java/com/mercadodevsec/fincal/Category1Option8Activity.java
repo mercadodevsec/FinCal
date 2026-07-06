@@ -66,6 +66,8 @@ public class Category1Option8Activity extends AppCompatActivity {
         });
 
         calculateButton.setOnClickListener(v -> calculateRental());
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void initializeViews() {
