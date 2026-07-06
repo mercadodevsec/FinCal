@@ -28,11 +28,18 @@
                 android:textStyle="bold"
                 tools:ignore="VisualLintSystemUi" />
 
-            <TableLayout
-                android:id="@+id/multiYearTable"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stretchColumns="1" />
+                android:orientation="horizontal">
+
+                <TableLayout
+                    android:id="@+id/multiYearTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1" />
+
+            </HorizontalScrollView>
 
             <TextView
                 android:id="@+id/firstYearTitle"
@@ -44,11 +51,17 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TableLayout
-                android:id="@+id/firstYearTable"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stretchColumns="*" />
+                android:orientation="horizontal">
+
+                <TableLayout
+                    android:id="@+id/firstYearTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*" />
+            </HorizontalScrollView>
         </LinearLayout>
     </ScrollView>
 
