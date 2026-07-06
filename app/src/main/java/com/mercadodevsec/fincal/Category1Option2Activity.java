@@ -78,7 +78,7 @@ public class Category1Option2Activity extends AppCompatActivity {
     }
 
     private void showTableFragment(double principal, double years, double rate) {
-        TableFragment fragment = TableFragment.newInstance(principal, years, rate);
+        AmortizationTableFragment fragment = AmortizationTableFragment.newInstance(principal, years, rate);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment);
         transaction.commit();

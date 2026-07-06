@@ -3,6 +3,7 @@ package com.mercadodevsec.fincal;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -115,6 +116,7 @@ public class RentalResultFragment extends Fragment {
         TextView tv = new TextView(getContext());
         tv.setText(text);
         tv.setPadding(16, 8, 16, 8);
+        tv.setGravity(Gravity.CENTER_VERTICAL);
         tv.setTextColor(getResources().getColor(R.color.text_primary, null));
         if (bold) {
             tv.setTypeface(null, Typeface.BOLD);
