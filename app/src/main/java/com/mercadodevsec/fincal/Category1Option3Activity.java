@@ -1,11 +1,15 @@
 package com.mercadodevsec.fincal;
 
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.TabStopSpan;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +28,7 @@ public class Category1Option3Activity extends AppCompatActivity {
     private RadioGroup repaymentRadioGroup;
     private LinearLayout extraPaymentsContainer;
     private TextView resultTextView;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +52,14 @@ public class Category1Option3Activity extends AppCompatActivity {
         repaymentRadioGroup = findViewById(R.id.repaymentRadioGroup);
         extraPaymentsContainer = findViewById(R.id.extraPaymentsContainer);
         resultTextView = findViewById(R.id.resultTextView);
+        scrollView = findViewById(R.id.scrollView);
         Button calculateButton = findViewById(R.id.calculateButton);
         Button backButton = findViewById(R.id.backButton);
 
         backButton.setOnClickListener(v -> finish());
 
         repaymentRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.radioExtraPayment) {
+            if (checkedId == R.id.radioExtraPayment || checkedId == R.id.radioBiweekly) {
                 extraPaymentsContainer.setVisibility(View.VISIBLE);
             } else {
                 extraPaymentsContainer.setVisibility(View.GONE);
@@ -108,14 +114,18 @@ public class Category1Option3Activity extends AppCompatActivity {
 
             int checkedId = repaymentRadioGroup.getCheckedRadioButtonId();
             DecimalFormat df = new DecimalFormat("#,##0.00");
+            String tab = "\t";
 
             if (checkedId == R.id.radioNormal) {
                 double totalPay = monthlyPayment * totalMonths;
                 double totalInt = totalPay - principal;
-                resultTextView.setText(String.format("Monthly Pay: $%s\nTotal Payments: $%s\nTotal Interest: $%s",
-                        df.format(monthlyPayment), df.format(totalPay), df.format(totalInt)));
+                String res = "Monthly Pay:" + tab + "<b>$" + df.format(monthlyPayment) + "</b><br/>" +
+                        "Total Payments:" + tab + "<b>$" + df.format(totalPay) + "</b><br/>" +
+                        "Total Interest:" + tab + "<b>$" + df.format(totalInt) + "</b>";
+                setAlignedResult(res);
             } else if (checkedId == R.id.radioPaybackAltogether) {
-                resultTextView.setText(String.format("Payoff Amount: $%s", df.format(currentBalance)));
+                String res = "Payoff Amount:" + tab + "<b>$" + df.format(currentBalance) + "</b>";
+                setAlignedResult(res);
             } else if (checkedId == R.id.radioExtraPayment || checkedId == R.id.radioBiweekly) {
                 double extraM = 0, extraY = 0, extraO = 0;
                 boolean isBiweekly = (checkedId == R.id.radioBiweekly);
@@ -131,22 +141,33 @@ public class Category1Option3Activity extends AppCompatActivity {
                 SimulationResult modified = simulate(currentBalance, monthlyPayment, rateMonth, extraM, extraY, extraO, isBiweekly);
 
                 String sb = "<b>Original Plan:</b><br>" +
-                        "Total Payments: <b>$" + df.format(original.totalPaid) + "</b><br>" +
-                        "Total Interest: $" + df.format(original.totalInterest) + "<br>" +
-                        "Payoff in: " + formatMonths(original.months) + "<br><br>" +
+                        "Total Payments:" + tab + "<b>$" + df.format(original.totalPaid) + "</b><br>" +
+                        "Total Interest:" + tab + "<b>$" + df.format(original.totalInterest) + "</b><br>" +
+                        "Payoff in:" + tab + "<b>" + formatMonths(original.months) + "</b><br><br>" +
                         "<b>New Plan:</b><br>" +
-                        "Total Payments: <b>$" + df.format(modified.totalPaid) + "</b><br>" +
-                        "Total Interest: $" + df.format(modified.totalInterest) + "<br>" +
-                        "Payoff in: " + formatMonths(modified.months) + "<br><br>" +
-                        "Total Interest Saved: <b>$" + df.format(original.totalInterest - modified.totalInterest) + "</b><br>" +
-                        "Time Saved: <b>" + formatMonths(original.months - modified.months) + "</b>";
+                        "Total Payments:" + tab + "<b>$" + df.format(modified.totalPaid) + "</b><br>" +
+                        "Total Interest:" + tab + "<b>$" + df.format(modified.totalInterest) + "</b><br>" +
+                        "Payoff in:" + tab + "<b>" + formatMonths(modified.months) + "</b><br><br>" +
+                        "Total Interest Saved:" + tab + "<b>$" + df.format(original.totalInterest - modified.totalInterest) + "</b><br>" +
+                        "Time Saved:" + tab + "<b>" + formatMonths(original.months - modified.months) + "</b>";
 
-                resultTextView.setText(android.text.Html.fromHtml(sb, android.text.Html.FROM_HTML_MODE_LEGACY));
+                setAlignedResult(sb);
             }
+
+            // Auto-scroll to results
+            scrollView.post(() -> scrollView.smoothScrollTo(0, resultTextView.getTop()));
 
         } catch (NumberFormatException e) {
             Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void setAlignedResult(String htmlContent) {
+        Spanned spanned = android.text.Html.fromHtml(htmlContent, android.text.Html.FROM_HTML_MODE_LEGACY);
+        SpannableString spannable = new SpannableString(spanned);
+        // Large tab stop for clear column separation
+        spannable.setSpan(new TabStopSpan.Standard(550), 0, spannable.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        resultTextView.setText(spannable);
     }
 
     private double parseDouble(String s) {

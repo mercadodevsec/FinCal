@@ -100,69 +100,142 @@
                 android:textColor="@color/text_primary"
                 android:textColorHint="@color/text_hint_color" />
 
-            <EditText
-                android:id="@+id/downPayment"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:gravity="center_vertical"
-                android:hint="@string/down_payment_percent"
-                android:importantForAutofill="no"
-                android:inputType="numberDecimal"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:textColor="@color/text_primary"
-                android:textColorHint="@color/text_hint_color" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
 
-            <EditText
-                android:id="@+id/propertyTax"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:gravity="center_vertical"
-                android:hint="@string/property_tax"
-                android:importantForAutofill="no"
-                android:inputType="numberDecimal"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:textColor="@color/text_primary"
-                android:textColorHint="@color/text_hint_color" />
+                <EditText
+                    android:id="@+id/downPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/down_payment_no_sign"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
 
-            <EditText
-                android:id="@+id/hoaFee"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:gravity="center_vertical"
-                android:hint="@string/hoa_fee_percent"
-                android:importantForAutofill="no"
-                android:inputType="numberDecimal"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:textColor="@color/text_primary"
-                android:textColorHint="@color/text_hint_color" />
+                <Spinner
+                    android:id="@+id/refSignSpinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/spinner_background"
+                    android:entries="@array/ref_sign_options"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/homeInsurance"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:gravity="center_vertical"
-                android:hint="@string/home_insurance_percent"
-                android:importantForAutofill="no"
-                android:inputType="numberDecimal"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:textColor="@color/text_primary"
-                android:textColorHint="@color/text_hint_color" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/propertyTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/property_tax_no_sign"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <Spinner
+                    android:id="@+id/refSignSpinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/spinner_background"
+                    android:entries="@array/ref_sign_options"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/hoaFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hoa_fee_no_sign"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/refSignSpinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/spinner_background"
+                    android:entries="@array/ref_sign_options"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/homeInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/home_insurance_no_sign"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <Spinner
+                    android:id="@+id/refSignSpinner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/spinner_background"
+                    android:entries="@array/ref_sign_options"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/dtiLabel"
@@ -185,13 +258,25 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Light" />
 
             <TextView
-                android:id="@+id/resultTextView"
+                android:id="@+id/summaryTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/text_primary"
-                android:textSize="16sp"
-                 />
+                android:textSize="16sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/resultTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+            </HorizontalScrollView>
 
         </LinearLayout>
     </ScrollView>

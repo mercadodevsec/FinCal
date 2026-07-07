@@ -86,11 +86,13 @@
 
     <!-- House Affordability -->
     <string name="annual_household_income">Annual household income ($)</string>
-    <string name="down_payment_percent">Down payment (%)</string>
-    <string name="hoa_fee_percent">HOA fee (%)</string>
-    <string name="home_insurance_percent">Home insurance (%)</string>
+    <string name="down_payment_no_sign">Down payment</string>
+    <string name="hoa_fee_no_sign">HOA fee or co-op fee (per year)</string>
+    <string name="home_insurance_no_sign">Home insurance (per year)</string>
     <string name="monthly_debt_payback">Total monthly debt payback ($)</string>
     <string name="mortgage_loan_term">Mortgage loan term (year)</string>
+    <string name="property_tax_no_sign">Property tax (per year)</string>
+
 
     <!-- DTI & Income/Expense -->
     <string name="auto_loan">Auto loan ($)</string>
@@ -228,6 +230,7 @@
     <string name="calc_student_loan">Student Loan Calculator</string>
     <string name="calc_vat">VAT Calculator</string>
     <string name="quote_8">Wealthy people invest first and spend what\'s left… Broke people spend first and invest what\'s left. \n — SeedTime</string>
+    <string name="down_payment_percent">Down payment (%)\n</string>
 
     <!-- String Arrays -->
     <string-array name="cash_ref_options">
@@ -265,6 +268,10 @@
         <item>Weekly</item>
         <item>Daily</item>
         <item>Continuously</item>
+    </string-array>
+    <string-array name="ref_sign_options">
+        <item>%</item>
+        <item>$</item>
     </string-array>
 
     <string-array name="ref_options">

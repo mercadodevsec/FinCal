@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ public class Category1Option7Activity extends AppCompatActivity {
     private EditText remainingBal, monthlyPayment, loanAmount, loanTerm, timeRemaining, currentInterestRate;
     private EditText newLoanTerm, newInterestRate, points, costsAndFees, cashAmount;
     private TextView resultTextView;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,7 @@ public class Category1Option7Activity extends AppCompatActivity {
         cashAmount = findViewById(R.id.cashAmount);
 
         resultTextView = findViewById(R.id.resultTextView);
+        scrollView = findViewById(R.id.scrollView);
         Button calculateButton = findViewById(R.id.calculateButton);
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
@@ -249,6 +252,9 @@ public class Category1Option7Activity extends AppCompatActivity {
         }
 
         resultTextView.setText(Html.fromHtml(sb.toString(), Html.FROM_HTML_MODE_LEGACY));
+
+        // Auto-scroll to results
+        scrollView.post(() -> scrollView.smoothScrollTo(0, resultTextView.getTop()));
     }
 
     private double calculateAPR(double loanAmount, double monthlyPayment, int months) {

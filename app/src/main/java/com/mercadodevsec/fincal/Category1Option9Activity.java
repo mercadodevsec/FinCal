@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class Category1Option9Activity extends AppCompatActivity {
     private EditText loanAmount, loanTerm, interestRate, loanFees, upfrontFees;
     private EditText houseValue, downPayment, mortgageLoanFees, points, pmiInsurance;
     private LinearLayout resultContainer;
+    private ScrollView scrollView;
     private Button calculateButton;
 
     private final DecimalFormat df = new DecimalFormat("#,##0.00");
@@ -63,6 +65,7 @@ public class Category1Option9Activity extends AppCompatActivity {
         points = findViewById(R.id.points);
         pmiInsurance = findViewById(R.id.pmiInsurance);
         resultContainer = findViewById(R.id.resultContainer);
+        scrollView = findViewById(R.id.scrollView);
         calculateButton = findViewById(R.id.calculateButton);
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
@@ -183,6 +186,9 @@ public class Category1Option9Activity extends AppCompatActivity {
             addResultRow("Total of " + totalPayments + " Payments:", "$" + df.format(totalOfPayments), false);
             addResultRow("Total Interest:", "$" + df.format(totalInterest), false);
             addResultRow("All Payments and Fees:", "$" + df.format(allPaymentsAndFees), false);
+
+            // Auto-scroll to results
+            scrollView.post(() -> scrollView.smoothScrollTo(0, resultContainer.getTop()));
 
         } catch (Exception e) {
             Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();

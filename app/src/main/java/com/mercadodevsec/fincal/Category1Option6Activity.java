@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class Category1Option6Activity extends AppCompatActivity {
     private EditText salaryIncome, pension, investmentSavings, otherIncome;
     private EditText rentalCost, mortgage, propertyTax, hoaFee, homeInsurance, creditCards, studentLoan, autoLoan, otherLoans;
     private TextView resultTextView;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class Category1Option6Activity extends AppCompatActivity {
         otherLoans = findViewById(R.id.otherLoans);
 
         resultTextView = findViewById(R.id.resultTextView);
+        scrollView = findViewById(R.id.scrollView);
         Button calculateButton = findViewById(R.id.calculateButton);
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
@@ -74,6 +77,9 @@ public class Category1Option6Activity extends AppCompatActivity {
             String result = getResult(totalAnnualIncome, monthlyHousingDebt, totalMonthlyDebt);
 
             resultTextView.setText(Html.fromHtml(result, Html.FROM_HTML_MODE_LEGACY));
+
+            // Auto-scroll to results
+            scrollView.post(() -> scrollView.smoothScrollTo(0, resultTextView.getTop()));
 
         } catch (Exception e) {
             Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();
