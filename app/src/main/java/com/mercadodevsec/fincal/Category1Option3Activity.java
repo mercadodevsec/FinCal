@@ -1,9 +1,8 @@
 package com.mercadodevsec.fincal;
 
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.TabStopSpan;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -26,8 +26,7 @@ public class Category1Option3Activity extends AppCompatActivity {
     private EditText origLoanAmount, origLoanTerm, interestRate, remainingTerm;
     private EditText perMonth, perYear, oneTimePay;
     private RadioGroup repaymentRadioGroup;
-    private LinearLayout extraPaymentsContainer;
-    private TextView resultTextView;
+    private LinearLayout extraPaymentsContainer, resultContainer;
     private ScrollView scrollView;
 
     @Override
@@ -51,7 +50,7 @@ public class Category1Option3Activity extends AppCompatActivity {
         oneTimePay = findViewById(R.id.oneTimePay);
         repaymentRadioGroup = findViewById(R.id.repaymentRadioGroup);
         extraPaymentsContainer = findViewById(R.id.extraPaymentsContainer);
-        resultTextView = findViewById(R.id.resultTextView);
+        resultContainer = findViewById(R.id.resultContainer);
         scrollView = findViewById(R.id.scrollView);
         Button calculateButton = findViewById(R.id.calculateButton);
         Button backButton = findViewById(R.id.backButton);
@@ -114,18 +113,17 @@ public class Category1Option3Activity extends AppCompatActivity {
 
             int checkedId = repaymentRadioGroup.getCheckedRadioButtonId();
             DecimalFormat df = new DecimalFormat("#,##0.00");
-            String tab = "\t";
+
+            resultContainer.removeAllViews();
 
             if (checkedId == R.id.radioNormal) {
                 double totalPay = monthlyPayment * totalMonths;
                 double totalInt = totalPay - principal;
-                String res = "Monthly Pay:" + tab + "<b>$" + df.format(monthlyPayment) + "</b><br/>" +
-                        "Total Payments:" + tab + "<b>$" + df.format(totalPay) + "</b><br/>" +
-                        "Total Interest:" + tab + "<b>$" + df.format(totalInt) + "</b>";
-                setAlignedResult(res);
+                addResultRow("Monthly Pay:", "$" + df.format(monthlyPayment), false);
+                addResultRow("Total Payments:", "$" + df.format(totalPay), false);
+                addResultRow("Total Interest:", "$" + df.format(totalInt), false);
             } else if (checkedId == R.id.radioPaybackAltogether) {
-                String res = "Payoff Amount:" + tab + "<b>$" + df.format(currentBalance) + "</b>";
-                setAlignedResult(res);
+                addResultRow("Payoff Amount:", "$" + df.format(currentBalance), false);
             } else if (checkedId == R.id.radioExtraPayment || checkedId == R.id.radioBiweekly) {
                 double extraM = 0, extraY = 0, extraO = 0;
                 boolean isBiweekly = (checkedId == R.id.radioBiweekly);
@@ -140,34 +138,71 @@ public class Category1Option3Activity extends AppCompatActivity {
                 SimulationResult original = simulate(currentBalance, monthlyPayment, rateMonth, 0, 0, 0, false);
                 SimulationResult modified = simulate(currentBalance, monthlyPayment, rateMonth, extraM, extraY, extraO, isBiweekly);
 
-                String sb = "<b>Original Plan:</b><br>" +
-                        "Total Payments:" + tab + "<b>$" + df.format(original.totalPaid) + "</b><br>" +
-                        "Total Interest:" + tab + "<b>$" + df.format(original.totalInterest) + "</b><br>" +
-                        "Payoff in:" + tab + "<b>" + formatMonths(original.months) + "</b><br><br>" +
-                        "<b>New Plan:</b><br>" +
-                        "Total Payments:" + tab + "<b>$" + df.format(modified.totalPaid) + "</b><br>" +
-                        "Total Interest:" + tab + "<b>$" + df.format(modified.totalInterest) + "</b><br>" +
-                        "Payoff in:" + tab + "<b>" + formatMonths(modified.months) + "</b><br><br>" +
-                        "Total Interest Saved:" + tab + "<b>$" + df.format(original.totalInterest - modified.totalInterest) + "</b><br>" +
-                        "Time Saved:" + tab + "<b>" + formatMonths(original.months - modified.months) + "</b>";
+                addResultRow("Original Plan:", "", true);
+                addResultRow("Total Payments:", "$" + df.format(original.totalPaid), false);
+                addResultRow("Total Interest:", "$" + df.format(original.totalInterest), false);
+                addResultRow("Payoff in:", formatMonths(original.months), false);
 
-                setAlignedResult(sb);
+                View spacer = new View(this);
+                spacer.setLayoutParams(new LinearLayout.LayoutParams(1, 20));
+                resultContainer.addView(spacer);
+
+                addResultRow("New Plan:", "", true);
+                addResultRow("Total Payments:", "$" + df.format(modified.totalPaid), false);
+                addResultRow("Total Interest:", "$" + df.format(modified.totalInterest), false);
+                addResultRow("Payoff in:", formatMonths(modified.months), false);
+
+                View spacer2 = new View(this);
+                spacer2.setLayoutParams(new LinearLayout.LayoutParams(1, 20));
+                resultContainer.addView(spacer2);
+
+                addResultRow("Total Interest Saved:", "$" + df.format(original.totalInterest - modified.totalInterest), false);
+                addResultRow("Time Saved:", formatMonths(original.months - modified.months), false);
             }
 
             // Auto-scroll to results
-            scrollView.post(() -> scrollView.smoothScrollTo(0, resultTextView.getTop()));
+            scrollView.post(() -> {
+                if (resultContainer.getChildCount() > 0) {
+                    scrollView.smoothScrollTo(0, resultContainer.getTop());
+                }
+            });
 
         } catch (NumberFormatException e) {
             Toast.makeText(this, R.string.invalid_input_format_warning, Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void setAlignedResult(String htmlContent) {
-        Spanned spanned = android.text.Html.fromHtml(htmlContent, android.text.Html.FROM_HTML_MODE_LEGACY);
-        SpannableString spannable = new SpannableString(spanned);
-        // Large tab stop for clear column separation
-        spannable.setSpan(new TabStopSpan.Standard(550), 0, spannable.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        resultTextView.setText(spannable);
+    private void addResultRow(String label, String value, boolean isHeader) {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        row.setPadding(0, 4, 0, 4);
+
+        TextView labelTv = new TextView(this);
+        labelTv.setText(label);
+        labelTv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+        labelTv.setTextSize(18);
+        labelTv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+
+        if (isHeader) {
+            labelTv.setTypeface(null, Typeface.BOLD);
+            row.addView(labelTv);
+        } else {
+            TextView valueTv = new TextView(this);
+            valueTv.setText(value);
+            valueTv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+            valueTv.setTextSize(18);
+            valueTv.setTypeface(null, Typeface.BOLD);
+            valueTv.setGravity(Gravity.END);
+            valueTv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+
+            row.addView(labelTv);
+            row.addView(valueTv);
+        }
+
+        resultContainer.addView(row);
     }
 
     private double parseDouble(String s) {
