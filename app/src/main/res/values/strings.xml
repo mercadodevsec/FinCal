@@ -231,6 +231,30 @@
     <string name="calc_vat">VAT Calculator</string>
     <string name="quote_8">Wealthy people invest first and spend what\'s left… Broke people spend first and invest what\'s left. \n — SeedTime</string>
     <string name="down_payment_percent">Down payment (%)\n</string>
+    <string name="annual_fha_mip">Annual FHA MIP (%)</string>
+    <string name="include_optionals_below">Include optionals below</string>
+    <string name="annual_fha_mip_duration">Annual FHA MIP Duration</string>
+    <string name="upfront_fha_mip">Upfront FHA MIP (%)</string>
+    <string name="home_insurance_year">Home insurance ($) /year</string>
+    <string name="hoa_fee_year">HOA fee ($) /year</string>
+    <string name="other_costs_year">Other costs ($) /year</string>
+    <string name="start_date">Start date</string>
+    <string name="property_taxes_increase">Property taxes increase (%)</string>
+    <string name="home_insurance_increase">Home insurance increase (%)</string>
+    <string name="hoa_fee_increase">Hoa Fee increase (%)</string>
+    <string name="annual_tax_amp_cost_increase"><![CDATA[Annual Tax & Cost Increase]]></string>
+    <string name="other_costs_increase">Other costs increase (%)</string>
+    <string name="more_options">More options</string>
+    <string name="extra_payments">Extra Payments</string>
+    <string name="show_biweekly_payback_results">Show biweekly payback results</string>
+    <string name="extra_monthly_pay">Extra monthly pay ($)</string>
+    <string name="extra_one_time_pay">Extra one-time pay ($)</string>
+    <string name="extra_yearly_pay">Extra yearly pay ($)</string>
+    <string name="first_month">First Month</string>
+    <string name="if_payback_bi_weekly_without_extra_payments">If Payback Bi-weekly without Extra Payments</string>
+    <string name="total">Total</string>
+    <string name="back_to_input">Back to Input</string>
+    <string name="results">Results</string>
 
     <!-- String Arrays -->
     <string-array name="cash_ref_options">
@@ -288,6 +312,35 @@
         <item>Every quarter</item>
         <item>Every 6 Months</item>
         <item>Every year</item>
+    </string-array>
+
+    <string-array name="fha_options">
+        <item>Loan term</item>
+        <item>11 years</item>
+        <item>5 years</item>
+        <item>78% LTV</item>
+        <item>No annual MIP</item>
+    </string-array>
+
+    <string-array name="months_options">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="payments_options">
+        <item>Monthly pay</item>
+        <item>Yearly pay</item>
+        <item>One-time pay</item>
     </string-array>
 
 </resources>

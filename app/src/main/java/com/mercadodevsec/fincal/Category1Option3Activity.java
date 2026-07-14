@@ -116,6 +116,8 @@ public class Category1Option3Activity extends AppCompatActivity {
 
             resultContainer.removeAllViews();
 
+            double alreadyPaid = monthlyPayment * monthsPaid;
+
             if (checkedId == R.id.radioNormal) {
                 double totalPay = monthlyPayment * totalMonths;
                 double totalInt = totalPay - principal;
@@ -138,26 +140,20 @@ public class Category1Option3Activity extends AppCompatActivity {
                 SimulationResult original = simulate(currentBalance, monthlyPayment, rateMonth, 0, 0, 0, false);
                 SimulationResult modified = simulate(currentBalance, monthlyPayment, rateMonth, extraM, extraY, extraO, isBiweekly);
 
-                addResultRow("Original Plan:", "", true);
-                addResultRow("Total Payments:", "$" + df.format(original.totalPaid), false);
-                addResultRow("Total Interest:", "$" + df.format(original.totalInterest), false);
-                addResultRow("Payoff in:", formatMonths(original.months), false);
+                addResultRow3("", "Original", "With payoff", true);
+                addResultRow3("Total payments", "$" + df.format(alreadyPaid + original.totalPaid), "$" + df.format(alreadyPaid + modified.totalPaid), false);
+                addResultRow3("Total interest", "$" + df.format(alreadyPaid + original.totalPaid - principal), "$" + df.format(alreadyPaid + modified.totalPaid - principal), false);
+                addResultRow3("Remaining payments", "$" + df.format(original.totalPaid), "$" + df.format(modified.totalPaid), false);
+                addResultRow3("Remaining interest", "$" + df.format(original.totalInterest), "$" + df.format(modified.totalInterest), false);
+                addResultRow3("Payoff in", formatMonths(original.months), formatMonths(modified.months), false);
 
                 View spacer = new View(this);
-                spacer.setLayoutParams(new LinearLayout.LayoutParams(1, 20));
+                spacer.setLayoutParams(new LinearLayout.LayoutParams(1, 25));
                 resultContainer.addView(spacer);
 
-                addResultRow("New Plan:", "", true);
-                addResultRow("Total Payments:", "$" + df.format(modified.totalPaid), false);
-                addResultRow("Total Interest:", "$" + df.format(modified.totalInterest), false);
-                addResultRow("Payoff in:", formatMonths(modified.months), false);
-
-                View spacer2 = new View(this);
-                spacer2.setLayoutParams(new LinearLayout.LayoutParams(1, 20));
-                resultContainer.addView(spacer2);
-
-                addResultRow("Total Interest Saved:", "$" + df.format(original.totalInterest - modified.totalInterest), false);
-                addResultRow("Time Saved:", formatMonths(original.months - modified.months), false);
+                addResultRow("With Payoff:", "", true);
+                addResultRow("Total Interest Saved", "$" + df.format(original.totalInterest - modified.totalInterest), false);
+                addResultRow("Time Saved", formatMonths(original.months - modified.months), false);
             }
 
             // Auto-scroll to results
@@ -172,7 +168,7 @@ public class Category1Option3Activity extends AppCompatActivity {
         }
     }
 
-    private void addResultRow(String label, String value, boolean isHeader) {
+    private void addResultRow(String label, String value, boolean isBold) {
         LinearLayout row = new LinearLayout(this);
         row.setOrientation(LinearLayout.HORIZONTAL);
         row.setLayoutParams(new LinearLayout.LayoutParams(
@@ -186,21 +182,68 @@ public class Category1Option3Activity extends AppCompatActivity {
         labelTv.setTextSize(18);
         labelTv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
-        if (isHeader) {
-            labelTv.setTypeface(null, Typeface.BOLD);
-            row.addView(labelTv);
-        } else {
-            TextView valueTv = new TextView(this);
-            valueTv.setText(value);
-            valueTv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
-            valueTv.setTextSize(18);
-            valueTv.setTypeface(null, Typeface.BOLD);
-            valueTv.setGravity(Gravity.END);
-            valueTv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        TextView valueTv = new TextView(this);
+        valueTv.setText(value);
+        valueTv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+        valueTv.setTextSize(18);
+        valueTv.setGravity(Gravity.END);
+        valueTv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
-            row.addView(labelTv);
+        if (isBold) {
+            labelTv.setTypeface(null, Typeface.BOLD);
+            valueTv.setTypeface(null, Typeface.BOLD);
+        } else {
+            valueTv.setTypeface(null, Typeface.BOLD); // Keep value bold by default as before
+        }
+
+        row.addView(labelTv);
+        if (value != null && !value.isEmpty()) {
             row.addView(valueTv);
         }
+
+        resultContainer.addView(row);
+    }
+
+    private void addResultRow3(String label, String val1, String val2, boolean isHeader) {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        row.setPadding(0, 8, 0, 8);
+
+        TextView labelTv = new TextView(this);
+        labelTv.setText(label);
+        labelTv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+        labelTv.setTextSize(14);
+        labelTv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1.2f));
+
+        TextView val1Tv = new TextView(this);
+        val1Tv.setText(val1);
+        val1Tv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+        val1Tv.setTextSize(14);
+        val1Tv.setGravity(Gravity.END);
+        val1Tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+
+        TextView val2Tv = new TextView(this);
+        val2Tv.setText(val2);
+        val2Tv.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+        val2Tv.setTextSize(14);
+        val2Tv.setGravity(Gravity.END);
+        val2Tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+
+        if (isHeader) {
+            labelTv.setTypeface(null, Typeface.BOLD);
+            val1Tv.setTypeface(null, Typeface.BOLD);
+            val2Tv.setTypeface(null, Typeface.BOLD);
+            labelTv.setTextSize(15);
+            val1Tv.setTextSize(15);
+            val2Tv.setTextSize(15);
+        }
+
+        row.addView(labelTv);
+        row.addView(val1Tv);
+        row.addView(val2Tv);
 
         resultContainer.addView(row);
     }
@@ -215,12 +258,17 @@ public class Category1Option3Activity extends AppCompatActivity {
     }
 
     private String formatMonths(int totalMonths) {
+        if (totalMonths <= 0) return "0 mos";
         int years = totalMonths / 12;
         int months = totalMonths % 12;
         if (years > 0) {
-            return years + " years " + months + " months";
+            if (months > 0) {
+                return years + " yrs, " + months + " mos";
+            } else {
+                return years + " yrs";
+            }
         } else {
-            return months + " months";
+            return months + " mos";
         }
     }
 

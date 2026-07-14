@@ -9,24 +9,616 @@
     tools:context=".Category1Option10Activity">
 
     <TextView
-        android:id="@+id/notReadyMessage"
-        android:layout_width="271dp"
-        android:layout_height="91dp"
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/not_available"
+        android:text="@string/calc_fha_loan"
         android:textColor="@color/text_primary"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toTopOf="@id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionsTitle">
+
+        <LinearLayout
+            android:id="@+id/optionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/homePrice"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/home_price"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/downPayment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/down_payment"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/interestRate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/interest_rate"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/loanTerm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/loan_term"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/upfrontFHA"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/upfront_fha_mip"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <EditText
+                android:id="@+id/annualFHA"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/annual_fha_mip"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint_color" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/annual_fha_mip_duration"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/fhaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/fha_options"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <CheckBox
+                android:id="@+id/includeOtherOptions1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/include_optionals_below"
+                android:textColor="@color/text_primary"
+                app:buttonTint="@color/text_third" />
+
+            <LinearLayout
+                android:id="@+id/additionalOptionsBelow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+
+                <EditText
+                    android:id="@+id/propertyTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/property_tax"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <EditText
+                    android:id="@+id/homeInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/home_insurance_year"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <EditText
+                    android:id="@+id/hoaFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hoa_fee_year"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <EditText
+                    android:id="@+id/otherCosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/other_costs_year"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/start_date"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <Spinner
+                        android:id="@+id/startMonthSpinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        android:entries="@array/months_options"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+                    <EditText
+                        android:id="@+id/year1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/year"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/includeOtherOptions2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_options"
+                android:textColor="@color/text_primary"
+                app:buttonTint="@color/text_third" />
+
+            <LinearLayout
+                android:id="@+id/moreOptions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/annual_tax_amp_cost_increase"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/propertyTaxesIncrease"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/property_taxes_increase"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <EditText
+                    android:id="@+id/homeInsuranceIncrease"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/home_insurance_increase"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <EditText
+                    android:id="@+id/hoaFeeIncrease"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hoa_fee_increase"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <EditText
+                    android:id="@+id/otherCostsIncrease"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/other_costs_increase"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/extra_payments"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/extraMonthlyAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/extra_monthly_pay"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/start_date"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <Spinner
+                        android:id="@+id/startMonthSpinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        android:entries="@array/months_options"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+                    <EditText
+                        android:id="@+id/year2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/year"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/extraYearlyAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/extra_yearly_pay"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/start_date"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <Spinner
+                        android:id="@+id/startMonthSpinner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        android:entries="@array/months_options"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+                    <EditText
+                        android:id="@+id/year3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/year"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/extraOneTimePay"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/extra_one_time_pay"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint_color" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/start_date"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <Spinner
+                        android:id="@+id/startMonthSpinner4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        android:entries="@array/months_options"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+                    <EditText
+                        android:id="@+id/year5"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="@string/year"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_hint_color" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/showBiweeklyPayback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_biweekly_payback_results"
+                    android:textColor="@color/text_primary"
+                    app:buttonTint="@color/text_third" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/calculateButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollView" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/button_calculate"
+        android:text="@string/calculate_button"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintBottom_toTopOf="@id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/button_navigation"
         android:text="@string/button_back"
         android:textColor="@color/text_secondary"
@@ -34,4 +626,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-5dp"
+        android:alpha=".5"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
